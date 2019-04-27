@@ -2,7 +2,7 @@
 <html>
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>Tag: SOAP - TutorialFlix</title>
+<title>Category: Web Services - TutorialFlix</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
@@ -10,7 +10,7 @@
     <meta name="description" content="Collection of technology tutorials">
 <meta property="og:type" content="website">
 <meta property="og:title" content="TutorialFlix">
-<meta property="og:url" content="http://www.tutorialflix.com/tags/SOAP/index.html">
+<meta property="og:url" content="http://www.tutorialflix.com/categories/Web-Services/index.html">
 <meta property="og:site_name" content="TutorialFlix">
 <meta property="og:description" content="Collection of technology tutorials">
 <meta property="og:locale" content="default">
@@ -141,8 +141,9 @@
     <div class="card-content">
         <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul>
-            <li><a href="/tags">Tags</a></li>
-            <li class="is-active"><a href="#" aria-current="page">SOAP</a></li>
+            <li><a href="/categories">Categories</a></li>
+            
+            <li class="is-active"><a href="#" aria-current="page">Web Services</a></li>
         </ul>
         </nav>
     </div>
@@ -219,172 +220,6 @@
 <pre><code>JBossFuse:admin@root&gt; install -s mvn:com.customer.service/customer-service-impl/1.0.0
 </code></pre><p>Now you can check the service url by visiting below url<br><a href="http://localhost:8181/cxf" target="_blank" rel="noopener">http://localhost:8181/cxf</a></p>
 
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-04-15T02:03:00.000Z">2019-04-15</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/How-to/">How to</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    3 minutes read (About 384 words)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/How-to-create-a-WSDL-file/">How to create a WSDL file</a>
-            
-        </h1>
-        <div class="content">
-            <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>WSDL stands for Web Services Description Language. WSDL is used to describe web services and also known as <strong>Contract</strong>. It is the base building block to <strong><a href="/#How-to-Create-Soap-Webservice">create a SOAP webservice</a></strong> in <strong>Contract-First Approach.</strong></p>
-<p>Creation of WSDL consist of following:</p>
-<ul>
-<li>Schema Design</li>
-<li>WSDL Design</li>
-</ul>
-<p>In the below example, we are creating a WSDL which contain a single operation <strong>createCustomer</strong>. You can follow the similar approach to add more operation in the WSDL. </p>
-<h2 id="Schema-Design"><a href="#Schema-Design" class="headerlink" title="Schema Design"></a>Schema Design</h2><p>First of all, we will create a schema file to define the request, response and fault structure. </p>
-<h3 id="XML-Definition"><a href="#XML-Definition" class="headerlink" title="XML Definition"></a>XML Definition</h3><p>Create a file of <strong>.xsd</strong> extension, in this case we are using <a href="https://raw.githubusercontent.com/vaibhavbhootna/webservices/master/customer-service-impl/src/main/resources/wsdl/schemas/customer-service.xsd" target="_blank" rel="noopener">customer-service.xsd</a><br><figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">xs:schema</span> <span class="hljs-attr">xmlns:xs</span>=<span class="hljs-string">"http://www.w3.org/2001/XMLSchema"</span> <span class="hljs-attr">targetNamespace</span>=<span class="hljs-string">"http://service.customer.com/types/v1"</span></span></span><br><span class="line"><span class="hljs-tag"><span class="hljs-attr">xmlns:tns</span>=<span class="hljs-string">"http://service.customer.com/types/v1"</span> <span class="hljs-attr">elementFormDefault</span>=<span class="hljs-string">"qualified"</span>&gt;</span></span><br><span class="line">  </span><br><span class="line"> <span class="hljs-comment">&lt;!-- Schema Content here --&gt;</span></span><br><span class="line">  </span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">xs:schema</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<h4 id="Request-structure"><a href="#Request-structure" class="headerlink" title="Request structure"></a>Request structure</h4><figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">xs:element</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"createCustomerRequest"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"tns:CreateCustomerRequest"</span> /&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">xs:complexType</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"CreateCustomerRequest"</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">xs:sequence</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">xs:element</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"customerName"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"xs:normalizedString"</span>/&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">xs:element</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"customerAge"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"xs:int"</span> /&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">xs:element</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"customerPhoneNumber"</span>&gt;</span></span><br><span class="line">            <span class="hljs-tag">&lt;<span class="hljs-name">xs:simpleType</span>&gt;</span></span><br><span class="line">                <span class="hljs-tag">&lt;<span class="hljs-name">xs:restriction</span> <span class="hljs-attr">base</span>=<span class="hljs-string">"xs:string"</span>&gt;</span></span><br><span class="line">                    <span class="hljs-tag">&lt;<span class="hljs-name">xs:maxLength</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"10"</span> /&gt;</span></span><br><span class="line">                    <span class="hljs-tag">&lt;<span class="hljs-name">xs:whiteSpace</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"collapse"</span> /&gt;</span></span><br><span class="line">                <span class="hljs-tag">&lt;/<span class="hljs-name">xs:restriction</span>&gt;</span></span><br><span class="line">            <span class="hljs-tag">&lt;/<span class="hljs-name">xs:simpleType</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;/<span class="hljs-name">xs:element</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;/<span class="hljs-name">xs:sequence</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">xs:complexType</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h4 id="Response-structure"><a href="#Response-structure" class="headerlink" title="Response structure"></a>Response structure</h4><figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">xs:element</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"createCustomerResponse"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"tns:CreateCustomerResponse"</span> /&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">xs:complexType</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"CreateCustomerResponse"</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">xs:sequence</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">xs:element</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"customerID"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"xs:integer"</span> /&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;/<span class="hljs-name">xs:sequence</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">xs:complexType</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h4 id="Fault-structure"><a href="#Fault-structure" class="headerlink" title="Fault structure"></a>Fault structure</h4><figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">xs:element</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"createCustomerFault"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"tns:CreateCustomerFault"</span> /&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">xs:complexType</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"CreateCustomerFault"</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">xs:sequence</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">xs:element</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"errorMessage"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"xs:normalizedString"</span> /&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">xs:element</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"errorCode"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"xs:int"</span> /&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;/<span class="hljs-name">xs:sequence</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">xs:complexType</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="WSDL-Design"><a href="#WSDL-Design" class="headerlink" title="WSDL Design"></a>WSDL Design</h2><h3 id="Definitions"><a href="#Definitions" class="headerlink" title="Definitions"></a>Definitions</h3><p>Create a file of <strong>.wsdl</strong>  extension, in this case we are using <a href="https://raw.githubusercontent.com/vaibhavbhootna/webservices/master/customer-service-impl/src/main/resources/wsdl/schemas/customer-service.xsd" target="_blank" rel="noopener">customer-service.wsdl</a><br><figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">&lt;?xml version="1.0" encoding="UTF-8" standalone="no"?&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">wsdl:definitions</span> </span></span><br><span class="line"><span class="hljs-tag"><span class="hljs-attr">xmlns:soap</span>=<span class="hljs-string">"http://schemas.xmlsoap.org/wsdl/soap/"</span> </span></span><br><span class="line"><span class="hljs-tag"><span class="hljs-attr">xmlns:wsdl</span>=<span class="hljs-string">"http://schemas.xmlsoap.org/wsdl/"</span> <span class="hljs-attr">xmlns:xsd</span>=<span class="hljs-string">"http://www.w3.org/2001/XMLSchema"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"customer-service"</span></span></span><br><span class="line"><span class="hljs-tag"><span class="hljs-attr">xmlns:tns</span>=<span class="hljs-string">"http://service.customer.com/v1"</span></span></span><br><span class="line"><span class="hljs-tag"><span class="hljs-attr">xmlns:cs</span>=<span class="hljs-string">"http://service.customer.com/types/v1"</span> <span class="hljs-attr">targetNamespace</span>=<span class="hljs-string">"http://service.customer.com/v1"</span>&gt;</span></span><br><span class="line">  </span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">wsdl:definitions</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="Schema-Import"><a href="#Schema-Import" class="headerlink" title="Schema Import"></a>Schema Import</h3><p>Import the <strong>schema</strong> which we have created in above example.<br><figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">wsdl:types</span>&gt;</span></span><br><span class="line">	<span class="hljs-tag">&lt;<span class="hljs-name">xsd:schema</span>&gt;</span></span><br><span class="line">		<span class="hljs-tag">&lt;<span class="hljs-name">xsd:import</span> <span class="hljs-attr">namespace</span>=<span class="hljs-string">"http://service.customer.com/types/v1"</span> <span class="hljs-attr">schemaLocation</span>=<span class="hljs-string">"schemas/customer-service.xsd"</span>/&gt;</span></span><br><span class="line">	<span class="hljs-tag">&lt;/<span class="hljs-name">xsd:schema</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">wsdl:types</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="Messages"><a href="#Messages" class="headerlink" title="Messages"></a>Messages</h3><p>Defines the <strong>data elements</strong> for each <strong>operation</strong><br><figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">wsdl:message</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"createCustomerRequest"</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">wsdl:part</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"createCustomerRequest"</span> <span class="hljs-attr">element</span>=<span class="hljs-string">"cs:createCustomerRequest"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">wsdl:part</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">wsdl:message</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">wsdl:message</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"createCustomerResponse"</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">wsdl:part</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"createCustomerResponse"</span> <span class="hljs-attr">element</span>=<span class="hljs-string">"cs:createCustomerResponse"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">wsdl:part</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">wsdl:message</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">wsdl:message</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"createCustomerFault"</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">wsdl:part</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"createCustomerFault"</span> <span class="hljs-attr">element</span>=<span class="hljs-string">"cs:createCustomerFault"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">wsdl:part</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">wsdl:message</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="PortType"><a href="#PortType" class="headerlink" title="PortType"></a>PortType</h3><p>Describes the <strong>operations</strong> that can be performed and the <strong>messages</strong> involved.<br><figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">wsdl:portType</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"CustomerServicePort"</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">wsdl:operation</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"createCustomer"</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">wsdl:input</span> <span class="hljs-attr">message</span>=<span class="hljs-string">"tns:createCustomerRequest"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"createCustomerRequest"</span> /&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">wsdl:output</span> <span class="hljs-attr">message</span>=<span class="hljs-string">"tns:createCustomerResponse"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"createCustomerResponse"</span> /&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">wsdl:fault</span> <span class="hljs-attr">message</span>=<span class="hljs-string">"tns:createCustomerFault"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"createCustomerFault"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">wsdl:fault</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;/<span class="hljs-name">wsdl:operation</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">wsdl:portType</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="Binding"><a href="#Binding" class="headerlink" title="Binding"></a>Binding</h3><p>Defines the protocol and data format for each port type<br><figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">wsdl:binding</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"CustomerServiceBinding"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"tns:CustomerServicePort"</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">soap:binding</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"document"</span> <span class="hljs-attr">transport</span>=<span class="hljs-string">"http://schemas.xmlsoap.org/soap/http"</span> /&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">wsdl:operation</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"createCustomer"</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">soap:operation</span> <span class="hljs-attr">soapAction</span>=<span class="hljs-string">"createCustomer"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"document"</span> /&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">wsdl:input</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"createCustomerRequest"</span>&gt;</span></span><br><span class="line">            <span class="hljs-tag">&lt;<span class="hljs-name">soap:body</span> <span class="hljs-attr">use</span>=<span class="hljs-string">"literal"</span> /&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;/<span class="hljs-name">wsdl:input</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">wsdl:output</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"createCustomerResponse"</span>&gt;</span></span><br><span class="line">            <span class="hljs-tag">&lt;<span class="hljs-name">soap:body</span> <span class="hljs-attr">use</span>=<span class="hljs-string">"literal"</span> /&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;/<span class="hljs-name">wsdl:output</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">wsdl:fault</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"createCustomerFault"</span>&gt;</span></span><br><span class="line">            <span class="hljs-tag">&lt;<span class="hljs-name">soap:fault</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"createCustomerFault"</span> <span class="hljs-attr">use</span>=<span class="hljs-string">"literal"</span> /&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;/<span class="hljs-name">wsdl:fault</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;/<span class="hljs-name">wsdl:operation</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">wsdl:binding</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<ul>
-<li><p><strong>binding</strong> element has two attributes - name and type. The name attribute (you can use any name you want) defines the name of the binding, and the type attribute points to the port for the binding, in this case the “CustomerServicePort” port.</p>
-</li>
-<li><p><strong>soap:binding</strong> element has two attributes - style and transport. The style attribute can be “rpc” or “document”. In this case we use document. The transport attribute defines the SOAP protocol to use. In this case we use HTTP.</p>
-</li>
-<li><p><strong>operation</strong> element defines each operation that the portType exposes. For each operation the corresponding SOAP action has to be defined. You must also specify how the input and output are encoded. In this case we use “literal”.</p>
-</li>
-</ul>
-<h3 id="Service"><a href="#Service" class="headerlink" title="Service"></a>Service</h3><p>Defines the <strong>port</strong> and <strong>binding</strong> with the <strong>address</strong> where you want to expose your service.</p>
-<pre><code class="xml"><span class="tag">&lt;<span class="name">wsdl:service</span> <span class="attr">name</span>=<span class="string">"CustomerService"</span>&gt;</span>
-    <span class="tag">&lt;<span class="name">wsdl:port</span> <span class="attr">name</span>=<span class="string">"CustomerServicePort"</span> <span class="attr">binding</span>=<span class="string">"tns:CustomerServiceBinding"</span>&gt;</span>
-        <span class="tag">&lt;<span class="name">soap:address</span> <span class="attr">location</span>=<span class="string">"http://0.0.0.0:8181/cxf/customerservice/v1"</span>/&gt;</span>
-    <span class="tag">&lt;/<span class="name">wsdl:port</span>&gt;</span>
-<span class="tag">&lt;/<span class="name">wsdl:service</span>&gt;</span>
-</code></pre>
-<p><a href="/#download">You can download the WSDL and XSD file for your reference</a></p>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-04-14T07:42:00.000Z">2019-04-14</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/SOAP/">SOAP</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    a minute read (About 161 words)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/SOAP/">SOAP -  Simple Object Access Protocol</a>
-            
-        </h1>
-        <div class="content">
-            <h2 id="What-is-SOAP"><a href="#What-is-SOAP" class="headerlink" title="What is SOAP ?"></a>What is SOAP ?</h2><p><strong>Simple Object Access Protocol</strong> is a messaging protocol specification for exchanging structured information. Its purpose is to provide extensibility, neutrality and independence.</p>
-<ul>
-<li>SOAP uses XML for its message format.</li>
-<li>SOAP relies on application layer protocols such as <strong>HTTP</strong>, <strong>SMTP</strong>, <strong>TCP</strong>, <strong>UDP</strong>, or <strong>JMS</strong> for message negotiation and transmission.</li>
-</ul>
-<p><strong>SOAP consists of three parts</strong></p>
-<ul>
-<li>an envelope, which defines the message structure and how to process it</li>
-<li>a set of encoding rules for expressing instances of application-defined datatypes</li>
-<li>a convention for representing procedure calls and responses</li>
-</ul>
-<h2 id="SOAP-building-blocks"><a href="#SOAP-building-blocks" class="headerlink" title="SOAP building blocks"></a>SOAP building blocks</h2><p>A SOAP message is an ordinary XML document containing the following elements:</p>
-<table>
-<thead>
-<tr>
-<th>Element</th>
-<th>Description</th>
-<th>Required</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Envelope</td>
-<td>Identifies the XML document as a SOAP message</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>Header</td>
-<td>Contains header information</td>
-<td>No</td>
-</tr>
-<tr>
-<td>Body</td>
-<td>Contains call, and response information</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>Fault</td>
-<td>Provides information about errors that occurred while processing the message</td>
-<td>No</td>
-</tr>
-</tbody>
-</table>
-<h3 id="Request-Format"><a href="#Request-Format" class="headerlink" title="Request Format"></a>Request Format</h3><figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">soapenv:Envelope</span> <span class="hljs-attr">xmlns:soapenv</span>=<span class="hljs-string">"http://schemas.xmlsoap.org/soap/envelope/"</span> <span class="hljs-attr">xmlns:v1</span>=<span class="hljs-string">"http://service.customer.com/types/v1"</span>&gt;</span></span><br><span class="line">   <span class="hljs-tag">&lt;<span class="hljs-name">soapenv:Header</span>&gt;</span></span><br><span class="line">      <span class="hljs-tag">&lt;<span class="hljs-name">wsse:Security</span> <span class="hljs-attr">soapenv:mustUnderstand</span>=<span class="hljs-string">"1"</span> <span class="hljs-attr">xmlns:wsse</span>=<span class="hljs-string">"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"</span> <span class="hljs-attr">xmlns:wsu</span>=<span class="hljs-string">"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"</span>&gt;</span></span><br><span class="line">         <span class="hljs-tag">&lt;<span class="hljs-name">wsse:UsernameToken</span> <span class="hljs-attr">wsu:Id</span>=<span class="hljs-string">"UsernameToken-F434D320D890F7CF1715251639631263"</span>&gt;</span></span><br><span class="line">            <span class="hljs-tag">&lt;<span class="hljs-name">wsse:Username</span>&gt;</span>admin<span class="hljs-tag">&lt;/<span class="hljs-name">wsse:Username</span>&gt;</span></span><br><span class="line">            <span class="hljs-tag">&lt;<span class="hljs-name">wsse:Password</span> <span class="hljs-attr">Type</span>=<span class="hljs-string">"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText"</span>&gt;</span>admin<span class="hljs-tag">&lt;/<span class="hljs-name">wsse:Password</span>&gt;</span></span><br><span class="line">         <span class="hljs-tag">&lt;/<span class="hljs-name">wsse:UsernameToken</span>&gt;</span></span><br><span class="line">      <span class="hljs-tag">&lt;/<span class="hljs-name">wsse:Security</span>&gt;</span></span><br><span class="line">   <span class="hljs-tag">&lt;/<span class="hljs-name">soapenv:Header</span>&gt;</span></span><br><span class="line">   <span class="hljs-tag">&lt;<span class="hljs-name">soapenv:Body</span>&gt;</span></span><br><span class="line">      <span class="hljs-tag">&lt;<span class="hljs-name">v1:deleteCustomerRequest</span>&gt;</span></span><br><span class="line">         <span class="hljs-tag">&lt;<span class="hljs-name">v1:customerID</span>&gt;</span>123321<span class="hljs-tag">&lt;/<span class="hljs-name">v1:customerID</span>&gt;</span></span><br><span class="line">      <span class="hljs-tag">&lt;/<span class="hljs-name">v1:deleteCustomerRequest</span>&gt;</span></span><br><span class="line">   <span class="hljs-tag">&lt;/<span class="hljs-name">soapenv:Body</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">soapenv:Envelope</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="Response-Format"><a href="#Response-Format" class="headerlink" title="Response Format"></a>Response Format</h3><figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">soapenv:Envelope</span> <span class="hljs-attr">xmlns:soapenv</span>=<span class="hljs-string">"http://schemas.xmlsoap.org/soap/envelope/"</span> <span class="hljs-attr">xmlns:v1</span>=<span class="hljs-string">"http://service.customer.com/types/v1"</span>&gt;</span></span><br><span class="line">   <span class="hljs-tag">&lt;<span class="hljs-name">soapenv:Body</span>&gt;</span></span><br><span class="line">      <span class="hljs-tag">&lt;<span class="hljs-name">v1:deleteCustomerResponse</span>&gt;</span></span><br><span class="line">         <span class="hljs-tag">&lt;<span class="hljs-name">v1:message</span>&gt;</span>Customer Deleted Successfully<span class="hljs-tag">&lt;/<span class="hljs-name">v1:message</span>&gt;</span></span><br><span class="line">      <span class="hljs-tag">&lt;/<span class="hljs-name">v1:deleteCustomerResponse</span>&gt;</span></span><br><span class="line">   <span class="hljs-tag">&lt;/<span class="hljs-name">soapenv:Body</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">soapenv:Envelope</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="Fault-Format"><a href="#Fault-Format" class="headerlink" title="Fault Format"></a>Fault Format</h3><figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">soapenv:Envelope</span> <span class="hljs-attr">xmlns:soapenv</span>=<span class="hljs-string">"http://schemas.xmlsoap.org/soap/envelope/"</span> <span class="hljs-attr">xmlns:xsi</span>=<span class="hljs-string">"http://www.w3.org/1999/XMLSchema-instance"</span> <span class="hljs-attr">xmlns:xsd</span>==<span class="hljs-string">"http://www.w3.org/1999/XMLSchema"</span>&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;<span class="hljs-name">soapenv:Body</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">soapenv:Fault</span>&gt;</span></span><br><span class="line">      <span class="hljs-tag">&lt;<span class="hljs-name">faultcode</span> <span class="hljs-attr">xsi:type</span>=<span class="hljs-string">"xsd:string"</span>&gt;</span>SOAP_FAULT_DELETECUSTOMER<span class="hljs-tag">&lt;/<span class="hljs-name">faultcode</span>&gt;</span></span><br><span class="line">      <span class="hljs-tag">&lt;<span class="hljs-name">faultstring</span> <span class="hljs-attr">xsi:type</span>=<span class="hljs-string">"xsd:string"</span>&gt;</span>Customer not present<span class="hljs-tag">&lt;/<span class="hljs-name">faultstring</span>&gt;</span></span><br><span class="line">      <span class="hljs-tag">&lt;<span class="hljs-name">faultactor</span>&gt;</span>CustNotFound<span class="hljs-tag">&lt;/<span class="hljs-name">faultactor</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;/<span class="hljs-name">soapenv:Fault</span>&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;/<span class="hljs-name">soapenv:Body</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">soapenv:Envelope</span>&gt;</span></span><br></pre></td></tr></table></figure>
         </div>
         
         
