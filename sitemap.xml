@@ -1,39 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
-  <url>
-    <loc>http://www.tutorialflix.com/Developing-SOAP-Web-service-using-Apache-CXF-and-Apache-Camel/</loc>
-    
-    <lastmod>2019-04-27T12:00:36.711Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.tutorialflix.com/How-to-load-property-file-in-java/</loc>
-    
-    <lastmod>2019-04-24T16:10:02.318Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.tutorialflix.com/How-to-create-a-WSDL-file/</loc>
-    
-    <lastmod>2019-04-24T16:02:37.392Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.tutorialflix.com/SOAP/</loc>
-    
-    <lastmod>2019-04-24T16:02:37.392Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.tutorialflix.com/Create-a-Web-Application-with-Spring-5/</loc>
-    
-    <lastmod>2019-04-24T16:02:37.384Z</lastmod>
-    
-  </url>
-  
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://tutorialflix.com/</loc>
+  <lastmod>2019-04-27T12:22:08+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://tutorialflix.com/categories/Web-Services/</loc>
+  <lastmod>2019-04-27T12:22:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://tutorialflix.com/Developing-SOAP-Web-service-using-Apache-CXF-and-Apache-Camel/</loc>
+  <lastmod>2019-04-27T12:22:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://tutorialflix.com/categories/How-to/</loc>
+  <lastmod>2019-04-27T12:22:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://tutorialflix.com/categories/How-to/Java/</loc>
+  <lastmod>2019-04-27T12:22:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://tutorialflix.com/How-to-load-property-file-in-java/</loc>
+  <lastmod>2019-04-27T12:22:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://tutorialflix.com/How-to-create-a-WSDL-file/</loc>
+  <lastmod>2019-04-27T12:22:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://tutorialflix.com/categories/SOAP/</loc>
+  <lastmod>2019-04-27T12:22:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://tutorialflix.com/SOAP/</loc>
+  <lastmod>2019-04-27T12:22:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://tutorialflix.com/categories/Spring/</loc>
+  <lastmod>2019-04-27T12:22:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://tutorialflix.com/Create-a-Web-Application-with-Spring-5/</loc>
+  <lastmod>2019-04-27T12:22:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://tutorialflix.com/tags/Java/</loc>
+  <lastmod>2019-04-27T12:22:08+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://tutorialflix.com/tags/SOAP/</loc>
+  <lastmod>2019-04-27T12:22:08+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://tutorialflix.com/tags/Middleware/</loc>
+  <lastmod>2019-04-27T12:22:08+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://tutorialflix.com/tags/WSDL/</loc>
+  <lastmod>2019-04-27T12:22:08+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://tutorialflix.com/tags/Webservices/</loc>
+  <lastmod>2019-04-27T12:22:08+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://tutorialflix.com/tags/Spring/</loc>
+  <lastmod>2019-04-27T12:22:08+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
 </urlset>
