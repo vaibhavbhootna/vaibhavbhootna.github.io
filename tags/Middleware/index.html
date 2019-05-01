@@ -95,7 +95,7 @@
 
 <link rel="stylesheet" href="/css/style.css">
 </head>
-<body class="is-3-column">
+<body class="is-2-column">
     <nav class="navbar navbar-main">
     <div class="container">
         <div class="navbar-brand is-flex-center">
@@ -117,7 +117,7 @@
                 
                 <a class="navbar-item" href="/categories">Categories</a>
                 
-                <a class="navbar-item" href="/tags">Tags</a>
+                <a class="navbar-item" href="/Videos">Videos</a>
                 
             </div>
             
@@ -125,9 +125,21 @@
                 
                     
                     
-                    <a class="navbar-item" target="_blank" title="Follow on GitHub" href="http://github.com/vaibhavbhootna">
+                    <a class="navbar-item" target="_blank" title="Connect on LinkedIn" href="https://www.linkedin.com/in/vaibhavbhootna">
+                        
+                        <i class="fab fa-linkedin"></i>
+                        
+                    </a>
+                    
+                    <a class="navbar-item" target="_blank" title="Checkout on GitHub" href="https://github.com/vaibhavbhootna">
                         
                         <i class="fab fa-github"></i>
+                        
+                    </a>
+                    
+                    <a class="navbar-item" target="_blank" title="Subscribe on Youtube" href="https://www.youtube.com/channel/UCDSJh3rB7sETtQfUgWr32mQ">
+                        
+                        <i class="fab fa-youtube"></i>
                         
                     </a>
                     
@@ -146,7 +158,7 @@
     <section class="section">
         <div class="container-fluid">
             <div class="columns">
-                <div class="column is-10-tablet is-10-desktop is-8-widescreen has-order-2 column-main"><div class="card">
+                <div class="column is-8-tablet is-8-desktop is-9-widescreen has-order-2 column-main"><div class="card">
     <div class="card-content">
         <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul>
@@ -163,12 +175,18 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-04-15T02:03:00.000Z">2019-04-15</time>
+                <time class="level-item has-text-grey" datetime="2019-04-14T18:03:00.000Z">2019-04-15</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/SOAP/">SOAP</a>
                 </div>
                 
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    3 minutes read (About 384 words)
+                </span>
                 
                 
             </div>
@@ -179,6 +197,15 @@
                 <a class="has-link-black-ter" href="/How-to-create-a-WSDL-file/">How to create a WSDL file</a>
             
         </h1>
+        
+
+<div class="level-left author">
+    <span class="level-item has-text-grey">
+       <a style="color: grey" href="#"> Vaibhav Bhootna</a>
+    </span>
+</div>
+
+
         <div class="content">
             <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>WSDL stands for Web Services Description Language. WSDL is used to describe web services and also known as <strong>Contract</strong>. It is the base building block to <strong><a href="/#How-to-Create-Soap-Webservice">create a SOAP webservice</a></strong> in <strong>Contract-First Approach.</strong></p>
 <p>Creation of WSDL consist of following:</p>
@@ -234,12 +261,18 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-04-14T07:42:00.000Z">2019-04-14</time>
+                <time class="level-item has-text-grey" datetime="2019-04-13T23:42:00.000Z">2019-04-14</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/SOAP/">SOAP</a>
                 </div>
                 
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    a minute read (About 161 words)
+                </span>
                 
                 
             </div>
@@ -250,6 +283,15 @@
                 <a class="has-link-black-ter" href="/SOAP/">SOAP -  Simple Object Access Protocol</a>
             
         </h1>
+        
+
+<div class="level-left author">
+    <span class="level-item has-text-grey">
+       <a style="color: grey" href="#"> Vaibhav Bhootna</a>
+    </span>
+</div>
+
+
         <div class="content">
             <h2 id="What-is-SOAP"><a href="#What-is-SOAP" class="headerlink" title="What is SOAP ?"></a>What is SOAP ?</h2><p><strong>Simple Object Access Protocol</strong> is a messaging protocol specification for exchanging structured information. Its purpose is to provide extensibility, neutrality and independence.</p>
 <ul>
@@ -297,6 +339,7 @@
 <h3 id="Request-Format"><a href="#Request-Format" class="headerlink" title="Request Format"></a>Request Format</h3><figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">soapenv:Envelope</span> <span class="hljs-attr">xmlns:soapenv</span>=<span class="hljs-string">"http://schemas.xmlsoap.org/soap/envelope/"</span> <span class="hljs-attr">xmlns:v1</span>=<span class="hljs-string">"http://service.customer.com/types/v1"</span>&gt;</span></span><br><span class="line">   <span class="hljs-tag">&lt;<span class="hljs-name">soapenv:Header</span>&gt;</span></span><br><span class="line">      <span class="hljs-tag">&lt;<span class="hljs-name">wsse:Security</span> <span class="hljs-attr">soapenv:mustUnderstand</span>=<span class="hljs-string">"1"</span> <span class="hljs-attr">xmlns:wsse</span>=<span class="hljs-string">"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"</span> <span class="hljs-attr">xmlns:wsu</span>=<span class="hljs-string">"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"</span>&gt;</span></span><br><span class="line">         <span class="hljs-tag">&lt;<span class="hljs-name">wsse:UsernameToken</span> <span class="hljs-attr">wsu:Id</span>=<span class="hljs-string">"UsernameToken-F434D320D890F7CF1715251639631263"</span>&gt;</span></span><br><span class="line">            <span class="hljs-tag">&lt;<span class="hljs-name">wsse:Username</span>&gt;</span>admin<span class="hljs-tag">&lt;/<span class="hljs-name">wsse:Username</span>&gt;</span></span><br><span class="line">            <span class="hljs-tag">&lt;<span class="hljs-name">wsse:Password</span> <span class="hljs-attr">Type</span>=<span class="hljs-string">"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText"</span>&gt;</span>admin<span class="hljs-tag">&lt;/<span class="hljs-name">wsse:Password</span>&gt;</span></span><br><span class="line">         <span class="hljs-tag">&lt;/<span class="hljs-name">wsse:UsernameToken</span>&gt;</span></span><br><span class="line">      <span class="hljs-tag">&lt;/<span class="hljs-name">wsse:Security</span>&gt;</span></span><br><span class="line">   <span class="hljs-tag">&lt;/<span class="hljs-name">soapenv:Header</span>&gt;</span></span><br><span class="line">   <span class="hljs-tag">&lt;<span class="hljs-name">soapenv:Body</span>&gt;</span></span><br><span class="line">      <span class="hljs-tag">&lt;<span class="hljs-name">v1:deleteCustomerRequest</span>&gt;</span></span><br><span class="line">         <span class="hljs-tag">&lt;<span class="hljs-name">v1:customerID</span>&gt;</span>123321<span class="hljs-tag">&lt;/<span class="hljs-name">v1:customerID</span>&gt;</span></span><br><span class="line">      <span class="hljs-tag">&lt;/<span class="hljs-name">v1:deleteCustomerRequest</span>&gt;</span></span><br><span class="line">   <span class="hljs-tag">&lt;/<span class="hljs-name">soapenv:Body</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">soapenv:Envelope</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h3 id="Response-Format"><a href="#Response-Format" class="headerlink" title="Response Format"></a>Response Format</h3><figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">soapenv:Envelope</span> <span class="hljs-attr">xmlns:soapenv</span>=<span class="hljs-string">"http://schemas.xmlsoap.org/soap/envelope/"</span> <span class="hljs-attr">xmlns:v1</span>=<span class="hljs-string">"http://service.customer.com/types/v1"</span>&gt;</span></span><br><span class="line">   <span class="hljs-tag">&lt;<span class="hljs-name">soapenv:Body</span>&gt;</span></span><br><span class="line">      <span class="hljs-tag">&lt;<span class="hljs-name">v1:deleteCustomerResponse</span>&gt;</span></span><br><span class="line">         <span class="hljs-tag">&lt;<span class="hljs-name">v1:message</span>&gt;</span>Customer Deleted Successfully<span class="hljs-tag">&lt;/<span class="hljs-name">v1:message</span>&gt;</span></span><br><span class="line">      <span class="hljs-tag">&lt;/<span class="hljs-name">v1:deleteCustomerResponse</span>&gt;</span></span><br><span class="line">   <span class="hljs-tag">&lt;/<span class="hljs-name">soapenv:Body</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">soapenv:Envelope</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h3 id="Fault-Format"><a href="#Fault-Format" class="headerlink" title="Fault Format"></a>Fault Format</h3><figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">soapenv:Envelope</span> <span class="hljs-attr">xmlns:soapenv</span>=<span class="hljs-string">"http://schemas.xmlsoap.org/soap/envelope/"</span> <span class="hljs-attr">xmlns:xsi</span>=<span class="hljs-string">"http://www.w3.org/1999/XMLSchema-instance"</span> <span class="hljs-attr">xmlns:xsd</span>==<span class="hljs-string">"http://www.w3.org/1999/XMLSchema"</span>&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;<span class="hljs-name">soapenv:Body</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">soapenv:Fault</span>&gt;</span></span><br><span class="line">      <span class="hljs-tag">&lt;<span class="hljs-name">faultcode</span> <span class="hljs-attr">xsi:type</span>=<span class="hljs-string">"xsd:string"</span>&gt;</span>SOAP_FAULT_DELETECUSTOMER<span class="hljs-tag">&lt;/<span class="hljs-name">faultcode</span>&gt;</span></span><br><span class="line">      <span class="hljs-tag">&lt;<span class="hljs-name">faultstring</span> <span class="hljs-attr">xsi:type</span>=<span class="hljs-string">"xsd:string"</span>&gt;</span>Customer not present<span class="hljs-tag">&lt;/<span class="hljs-name">faultstring</span>&gt;</span></span><br><span class="line">      <span class="hljs-tag">&lt;<span class="hljs-name">faultactor</span>&gt;</span>CustNotFound<span class="hljs-tag">&lt;/<span class="hljs-name">faultactor</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;/<span class="hljs-name">soapenv:Fault</span>&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;/<span class="hljs-name">soapenv:Body</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">soapenv:Envelope</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
         </div>
         
         
@@ -317,7 +360,83 @@
 
 
 
-<div class="column is-1-tablet is-1-desktop is-2-widescreen  has-order-1 column-left is-sticky">
+<div class="column is-2-tablet is-2-desktop is-2-widescreen  has-order-1 column-left is-sticky">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Récents
+        </h3>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-01T02:10:00.000Z">2019-05-01</time></div>
+                    <a href="/How-to-create-a-maven-project/" class="has-link-black-ter is-size-6">How to create a maven project</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/How-to/">How to</a> / <a class="has-link-grey -link" href="/categories/How-to/Java/">Java</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-28T01:10:04.000Z">2019-04-28</time></div>
+                    <a href="/Developing-REST-Service-using-Spring-Boot/" class="has-link-black-ter is-size-6">Developing REST Service using Spring Boot</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-24T09:09:00.000Z">2019-04-24</time></div>
+                    <a href="/Developing-SOAP-Web-service-using-Apache-CXF-and-Apache-Camel/" class="has-link-black-ter is-size-6">Developing SOAP Web service using Apache CXF and Apache Camel</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Web-Services/">Web Services</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-23T22:44:00.000Z">2019-04-24</time></div>
+                    <a href="/How-to-load-property-file-in-java/" class="has-link-black-ter is-size-6">How to load property file in java</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/How-to/">How to</a> / <a class="has-link-grey -link" href="/categories/How-to/Java/">Java</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-14T18:03:00.000Z">2019-04-15</time></div>
+                    <a href="/How-to-create-a-WSDL-file/" class="has-link-black-ter is-size-6">How to create a WSDL file</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/SOAP/">SOAP</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
     
         
     
@@ -326,7 +445,7 @@
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                Categories
+                Catégories
             </h3>
             <ul class="menu-list">
             <li>
@@ -335,7 +454,7 @@
                 <span class="level-item">How to</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">1</span>
+                <span class="level-item tag">2</span>
             </span>
         </a><ul><li>
         <a class="level is-marginless" href="/categories/How-to/Java/">
@@ -343,7 +462,7 @@
                 <span class="level-item">Java</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">1</span>
+                <span class="level-item tag">2</span>
             </span>
         </a></li></ul></li><li>
         <a class="level is-marginless" href="/categories/SOAP/">
@@ -378,172 +497,11 @@
     
         <div class="column-right-shadow is-hidden-widescreen is-sticky">
         
-            
-<div class="card widget">
-    <div class="card-content">
-        <h3 class="menu-label">
-            Recent
-        </h3>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-28T09:10:04.000Z">2019-04-28</time></div>
-                    <a href="/Developing-REST-Service-using-Spring-Boot/" class="has-link-black-ter is-size-6">Developing REST Service using Spring Boot</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-24T17:09:00.000Z">2019-04-24</time></div>
-                    <a href="/Developing-SOAP-Web-service-using-Apache-CXF-and-Apache-Camel/" class="has-link-black-ter is-size-6">Developing SOAP Web service using Apache CXF and Apache Camel</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Web-Services/">Web Services</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-24T06:44:00.000Z">2019-04-24</time></div>
-                    <a href="/How-to-load-property-file-in-java/" class="has-link-black-ter is-size-6">How to load property file in java</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/How-to/">How to</a> / <a class="has-link-grey -link" href="/categories/How-to/Java/">Java</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-15T02:03:00.000Z">2019-04-15</time></div>
-                    <a href="/How-to-create-a-WSDL-file/" class="has-link-black-ter is-size-6">How to create a WSDL file</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/SOAP/">SOAP</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-14T07:42:00.000Z">2019-04-14</time></div>
-                    <a href="/SOAP/" class="has-link-black-ter is-size-6">SOAP -  Simple Object Access Protocol</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/SOAP/">SOAP</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-    </div>
-</div>
-
-        
         </div>
     
 </div>
 
                 
-
-
-
-
-<div class="column is-1-tablet is-1-desktop is-2-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right is-sticky">
-    
-        
-<div class="card widget">
-    <div class="card-content">
-        <h3 class="menu-label">
-            Recent
-        </h3>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-28T09:10:04.000Z">2019-04-28</time></div>
-                    <a href="/Developing-REST-Service-using-Spring-Boot/" class="has-link-black-ter is-size-6">Developing REST Service using Spring Boot</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-24T17:09:00.000Z">2019-04-24</time></div>
-                    <a href="/Developing-SOAP-Web-service-using-Apache-CXF-and-Apache-Camel/" class="has-link-black-ter is-size-6">Developing SOAP Web service using Apache CXF and Apache Camel</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Web-Services/">Web Services</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-24T06:44:00.000Z">2019-04-24</time></div>
-                    <a href="/How-to-load-property-file-in-java/" class="has-link-black-ter is-size-6">How to load property file in java</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/How-to/">How to</a> / <a class="has-link-grey -link" href="/categories/How-to/Java/">Java</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-15T02:03:00.000Z">2019-04-15</time></div>
-                    <a href="/How-to-create-a-WSDL-file/" class="has-link-black-ter is-size-6">How to create a WSDL file</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/SOAP/">SOAP</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-14T07:42:00.000Z">2019-04-14</time></div>
-                    <a href="/SOAP/" class="has-link-black-ter is-size-6">SOAP -  Simple Object Access Protocol</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/SOAP/">SOAP</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-    </div>
-</div>
-
-    
-    
-</div>
-
             </div>
         </div>
     </section>
@@ -557,8 +515,7 @@
                 
                 </a>
                 <p class="is-size-7">
-                &copy; 2019 Vaibhav Bhootna&nbsp;
-                Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
+                &copy; 2019 Tutorialflix.com&nbsp;
                 
                 </p>
             </div>
@@ -568,25 +525,25 @@
                 
                 
                 <p class="control">
-                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                    <a class="button is-white is-large" target="_blank" title="Connect on LinkedIn" href="https://www.linkedin.com/in/vaibhavbhootna">
                         
-                        <i class="fab fa-creative-commons"></i>
-                        
-                    </a>
-                </p>
-                
-                <p class="control">
-                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
-                        
-                        <i class="fab fa-creative-commons-by"></i>
+                        <i class="fab fa-linkedin"></i>
                         
                     </a>
                 </p>
                 
                 <p class="control">
-                    <a class="button is-white is-large" target="_blank" title="Follow on GitHub" href="http://github.com/vaibhavbhootna">
+                    <a class="button is-white is-large" target="_blank" title="Checkout on GitHub" href="http://github.com/vaibhavbhootna">
                         
                         <i class="fab fa-github"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Subscribe on Youtube" href="https://www.youtube.com/channel/UCDSJh3rB7sETtQfUgWr32mQ">
+                        
+                        <i class="fab fa-youtube"></i>
                         
                     </a>
                 </p>
@@ -711,9 +668,9 @@ document.addEventListener('DOMContentLoaded', function () {
     (function (window) {
         var INSIGHT_CONFIG = {
             TRANSLATION: {
-                POSTS: 'Posts',
+                POSTS: 'Articles',
                 PAGES: 'Pages',
-                CATEGORIES: 'Categories',
+                CATEGORIES: 'Catégories',
                 TAGS: 'Tags',
                 UNTITLED: '(Untitled)',
             },
