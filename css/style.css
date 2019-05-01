@@ -50,6 +50,13 @@ textarea {
     top: 1.5rem;
   }
 }
+.title {
+  margin-bottom: 5px !important;
+}
+.author {
+  padding: 2px;
+  margin-bottom: 1.5rem !important;
+}
 .tag.is-grey {
   background: #e7e7e7;
 }
