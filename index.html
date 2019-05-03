@@ -165,6 +165,127 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-05-03T15:58:00.000Z">2019-05-03</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Webservices/">Webservices</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Webservices/Spring/">Spring</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Webservices/Spring/SOAP/">SOAP</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    5 minutes read (About 798 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/How-to-create-soap-webservice-using-spring-boot/">How to create SOAP webservice using Spring-WS &amp; Spring Boot</a>
+            
+        </h1>
+        
+
+<div class="level-left author">
+    <span class="level-item has-text-grey">
+       <a style="color: grey" href="#"> Vaibhav Bhootna</a>
+    </span>
+</div>
+
+
+        <div class="content">
+            <h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p>In this tutorial, we’ll see how to create a SOAP webservice using Spring-WS and Spring Boot. This post will focus only on pure Java based approach using annotations.</p>
+<h2 id="Pre-requisties"><a href="#Pre-requisties" class="headerlink" title="Pre-requisties"></a>Pre-requisties</h2><ol>
+<li>JDK 1.8 +</li>
+<li>Maven </li>
+<li>IDE</li>
+</ol>
+<h2 id="Approach"><a href="#Approach" class="headerlink" title="Approach"></a>Approach</h2><p>SOAP services can be developed with two methods</p>
+<ol>
+<li>Contract First : Define WSDL and Schema before writing any code. </li>
+<li>Contract Last: Auto-generate the WSDL and schemas from the java classes.</li>
+</ol>
+<p>Spring-ws only supports the contract-first approach</p>
+<h2 id="Project-setup"><a href="#Project-setup" class="headerlink" title="Project setup"></a>Project setup</h2><p>Create a maven project and add the following dependencies in  the pom.xml</p>
+<figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">dependencyManagement</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">dependencies</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line">            <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span></span><br><span class="line">            <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-starter-parent<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>2.1.3.RELEASE<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span></span><br><span class="line">            <span class="hljs-tag">&lt;<span class="hljs-name">type</span>&gt;</span>pom<span class="hljs-tag">&lt;/<span class="hljs-name">type</span>&gt;</span></span><br><span class="line">            <span class="hljs-tag">&lt;<span class="hljs-name">scope</span>&gt;</span>import<span class="hljs-tag">&lt;/<span class="hljs-name">scope</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;/<span class="hljs-name">dependencies</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">dependencyManagement</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">dependencies</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-starter-web-services<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>wsdl4j<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>wsdl4j<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">dependencies</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="Schema-Design"><a href="#Schema-Design" class="headerlink" title="Schema Design"></a>Schema Design</h2><p>Contract first approach requires us to define the schema.  And then we’ll use Spring-ws  auto-generate WSDL out of  the schema. </p>
+<figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">xs:schema</span></span></span><br><span class="line"><span class="hljs-tag">    <span class="hljs-attr">xmlns:xs</span>=<span class="hljs-string">"http://www.w3.org/2001/XMLSchema"</span>	<span class="hljs-attr">targetNamespace</span>=<span class="hljs-string">"http://spring.tutorialflix.com/types/v1"</span></span></span><br><span class="line"><span class="hljs-tag">    <span class="hljs-attr">xmlns:tns</span>=<span class="hljs-string">"http://spring.tutorialflix.com/types/v1"</span>	<span class="hljs-attr">elementFormDefault</span>=<span class="hljs-string">"qualified"</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">xs:element</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"createCustomerRequest"</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">xs:complexType</span>&gt;</span></span><br><span class="line">            <span class="hljs-tag">&lt;<span class="hljs-name">xs:sequence</span>&gt;</span></span><br><span class="line">                <span class="hljs-tag">&lt;<span class="hljs-name">xs:element</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"customerName"</span>&gt;</span></span><br><span class="line">                    <span class="hljs-tag">&lt;<span class="hljs-name">xs:simpleType</span>&gt;</span></span><br><span class="line">                        <span class="hljs-tag">&lt;<span class="hljs-name">xs:restriction</span> <span class="hljs-attr">base</span>=<span class="hljs-string">"xs:string"</span>&gt;</span></span><br><span class="line">                            <span class="hljs-tag">&lt;<span class="hljs-name">xs:maxLength</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"50"</span> /&gt;</span></span><br><span class="line">                            <span class="hljs-tag">&lt;<span class="hljs-name">xs:whiteSpace</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"collapse"</span> /&gt;</span></span><br><span class="line">                        <span class="hljs-tag">&lt;/<span class="hljs-name">xs:restriction</span>&gt;</span></span><br><span class="line">                    <span class="hljs-tag">&lt;/<span class="hljs-name">xs:simpleType</span>&gt;</span></span><br><span class="line">                <span class="hljs-tag">&lt;/<span class="hljs-name">xs:element</span>&gt;</span></span><br><span class="line">                <span class="hljs-tag">&lt;<span class="hljs-name">xs:element</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"customerAge"</span>&gt;</span></span><br><span class="line">                    <span class="hljs-tag">&lt;<span class="hljs-name">xs:simpleType</span>&gt;</span></span><br><span class="line">                        <span class="hljs-tag">&lt;<span class="hljs-name">xs:restriction</span> <span class="hljs-attr">base</span>=<span class="hljs-string">"xs:integer"</span> /&gt;</span></span><br><span class="line">                    <span class="hljs-tag">&lt;/<span class="hljs-name">xs:simpleType</span>&gt;</span></span><br><span class="line">                <span class="hljs-tag">&lt;/<span class="hljs-name">xs:element</span>&gt;</span></span><br><span class="line">                <span class="hljs-tag">&lt;<span class="hljs-name">xs:element</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"customerCity"</span>&gt;</span></span><br><span class="line">                    <span class="hljs-tag">&lt;<span class="hljs-name">xs:simpleType</span>&gt;</span></span><br><span class="line">                        <span class="hljs-tag">&lt;<span class="hljs-name">xs:restriction</span> <span class="hljs-attr">base</span>=<span class="hljs-string">"xs:string"</span>&gt;</span></span><br><span class="line">                            <span class="hljs-tag">&lt;<span class="hljs-name">xs:maxLength</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"50"</span> /&gt;</span></span><br><span class="line">                            <span class="hljs-tag">&lt;<span class="hljs-name">xs:whiteSpace</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"collapse"</span> /&gt;</span></span><br><span class="line">                        <span class="hljs-tag">&lt;/<span class="hljs-name">xs:restriction</span>&gt;</span></span><br><span class="line">                    <span class="hljs-tag">&lt;/<span class="hljs-name">xs:simpleType</span>&gt;</span></span><br><span class="line">                <span class="hljs-tag">&lt;/<span class="hljs-name">xs:element</span>&gt;</span></span><br><span class="line">                <span class="hljs-tag">&lt;<span class="hljs-name">xs:element</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"customerPhoneNumber"</span>&gt;</span></span><br><span class="line">                    <span class="hljs-tag">&lt;<span class="hljs-name">xs:simpleType</span>&gt;</span></span><br><span class="line">                        <span class="hljs-tag">&lt;<span class="hljs-name">xs:restriction</span> <span class="hljs-attr">base</span>=<span class="hljs-string">"xs:string"</span>&gt;</span></span><br><span class="line">                            <span class="hljs-tag">&lt;<span class="hljs-name">xs:maxLength</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"10"</span> /&gt;</span></span><br><span class="line">                            <span class="hljs-tag">&lt;<span class="hljs-name">xs:whiteSpace</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"collapse"</span> /&gt;</span></span><br><span class="line">                        <span class="hljs-tag">&lt;/<span class="hljs-name">xs:restriction</span>&gt;</span></span><br><span class="line">                    <span class="hljs-tag">&lt;/<span class="hljs-name">xs:simpleType</span>&gt;</span></span><br><span class="line">                <span class="hljs-tag">&lt;/<span class="hljs-name">xs:element</span>&gt;</span></span><br><span class="line">            <span class="hljs-tag">&lt;/<span class="hljs-name">xs:sequence</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;/<span class="hljs-name">xs:complexType</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;/<span class="hljs-name">xs:element</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">xs:element</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"createCustomerResponse"</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">xs:complexType</span>&gt;</span></span><br><span class="line">            <span class="hljs-tag">&lt;<span class="hljs-name">xs:sequence</span>&gt;</span></span><br><span class="line">                <span class="hljs-tag">&lt;<span class="hljs-name">xs:element</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"customerID"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"xs:integer"</span> /&gt;</span></span><br><span class="line">                <span class="hljs-tag">&lt;<span class="hljs-name">xs:element</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"details"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"xs:string"</span> /&gt;</span></span><br><span class="line">                <span class="hljs-tag">&lt;<span class="hljs-name">xs:element</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"status"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"xs:string"</span> /&gt;</span></span><br><span class="line">            <span class="hljs-tag">&lt;/<span class="hljs-name">xs:sequence</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;/<span class="hljs-name">xs:complexType</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;/<span class="hljs-name">xs:element</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">xs:element</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"createCustomerFault"</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">xs:complexType</span>&gt;</span></span><br><span class="line">            <span class="hljs-tag">&lt;<span class="hljs-name">xs:sequence</span>&gt;</span></span><br><span class="line">                <span class="hljs-tag">&lt;<span class="hljs-name">xs:element</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"errorMessage"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"xs:normalizedString"</span> /&gt;</span></span><br><span class="line">                <span class="hljs-tag">&lt;<span class="hljs-name">xs:element</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"errorCode"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"xs:int"</span> /&gt;</span></span><br><span class="line">            <span class="hljs-tag">&lt;/<span class="hljs-name">xs:sequence</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;/<span class="hljs-name">xs:complexType</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;/<span class="hljs-name">xs:element</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">xs:schema</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="Generate-Java-Classes"><a href="#Generate-Java-Classes" class="headerlink" title="Generate Java Classes"></a>Generate Java Classes</h2><p>Now, we’ll <a href="http://www.mojohaus.org/jaxb2-maven-plugin/Documentation/v2.2/" target="_new">jaxb2-maven-plugin</a> to generate the java classes from the schema. Add the below plugin in your pom.xml</p>
+<figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">plugin</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.codehaus.mojo<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>jaxb2-maven-plugin<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>1.6<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">executions</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">execution</span>&gt;</span></span><br><span class="line">            <span class="hljs-tag">&lt;<span class="hljs-name">id</span>&gt;</span>xjc<span class="hljs-tag">&lt;/<span class="hljs-name">id</span>&gt;</span></span><br><span class="line">            <span class="hljs-tag">&lt;<span class="hljs-name">goals</span>&gt;</span></span><br><span class="line">                <span class="hljs-tag">&lt;<span class="hljs-name">goal</span>&gt;</span>xjc<span class="hljs-tag">&lt;/<span class="hljs-name">goal</span>&gt;</span></span><br><span class="line">            <span class="hljs-tag">&lt;/<span class="hljs-name">goals</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;/<span class="hljs-name">execution</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;/<span class="hljs-name">executions</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">configuration</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">schemaDirectory</span>&gt;</span>$&#123;project.basedir&#125;/src/main/resources/<span class="hljs-tag">&lt;/<span class="hljs-name">schemaDirectory</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">outputDirectory</span>&gt;</span>$&#123;project.basedir&#125;/src/main/java<span class="hljs-tag">&lt;/<span class="hljs-name">outputDirectory</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">clearOutputDir</span>&gt;</span>false<span class="hljs-tag">&lt;/<span class="hljs-name">clearOutputDir</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;/<span class="hljs-name">configuration</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">plugin</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>schemaDirectory</strong> : location of the schema</li>
+<li><strong>outputDirectory</strong>: where we want our java classes.</li>
+<li><strong>clearOutputDir</strong> : making this true will delete the classes every time you compile the project</li>
+</ul>
+<p>Now, we’ll generate the classes by issuing a following maven command.</p>
+<pre><code>$ mvn clean install
+</code></pre><p>   Now you can see the auto-generated classes in you project folder.</p>
+<h2 id="Setup-Endpoint"><a href="#Setup-Endpoint" class="headerlink" title="Setup Endpoint"></a>Setup Endpoint</h2><p>Now, we’ll setup an endpoint in our Java code to serve the request. Create a class and annotate with @Endpoint</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">package</span> com.tutorialflix.spring.endpoint;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">import</span> java.math.BigInteger;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">import</span> org.springframework.ws.server.endpoint.annotation.Endpoint;</span><br><span class="line"><span class="hljs-keyword">import</span> org.springframework.ws.server.endpoint.annotation.PayloadRoot;</span><br><span class="line"><span class="hljs-keyword">import</span> org.springframework.ws.server.endpoint.annotation.RequestPayload;</span><br><span class="line"><span class="hljs-keyword">import</span> org.springframework.ws.server.endpoint.annotation.ResponsePayload;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">import</span> com.tutorialflix.spring.types.v1.CreateCustomerRequest;</span><br><span class="line"><span class="hljs-keyword">import</span> com.tutorialflix.spring.types.v1.CreateCustomerResponse;</span><br><span class="line"></span><br><span class="line"><span class="hljs-meta">@Endpoint</span></span><br><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CustomerServiceEndpoint</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"> <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String NAMESPACE_URI = <span class="hljs-string">"http://spring.tutorialflix.com/types/v1"</span>;</span><br><span class="line"></span><br><span class="line"> <span class="hljs-meta">@PayloadRoot</span>(namespace = NAMESPACE_URI, localPart = <span class="hljs-string">"createCustomerRequest"</span>)</span><br><span class="line"> <span class="hljs-meta">@ResponsePayload</span></span><br><span class="line"> <span class="hljs-function"><span class="hljs-keyword">public</span> CreateCustomerResponse <span class="hljs-title">createCustomer</span><span class="hljs-params">(@RequestPayload CreateCustomerRequest createCustomerRequest)</span> </span>&#123;</span><br><span class="line">  CreateCustomerResponse response = <span class="hljs-keyword">new</span> CreateCustomerResponse();</span><br><span class="line">  Long id = (<span class="hljs-keyword">long</span>) Math.random();</span><br><span class="line">  response.setCustomerID(BigInteger.valueOf(id));</span><br><span class="line">  response.setDetails(createCustomerRequest.getCustomerName() + <span class="hljs-string">"'s accouhnt created"</span>);</span><br><span class="line">  response.setStatus(<span class="hljs-string">"Account is under review.."</span>);</span><br><span class="line">  <span class="hljs-keyword">return</span> response;</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>For the purpose of this tutorial, I added very simple code to return a success response.</p>
+<ul>
+<li><strong>@Endpoint</strong>: This indicates that this class is a web service endpoint</li>
+<li><strong>@PayloadRoot</strong>: This indicates that  incoming soap request for this method will have defined local part and namespace. It will basically try to match the <strong>RootElement</strong> of your xml message.</li>
+<li><strong>@ResponsePayload</strong>: This indicates that method will return a payload.</li>
+</ul>
+<h2 id="Configure-Servlet-Bean-amp-WSDL-Definition"><a href="#Configure-Servlet-Bean-amp-WSDL-Definition" class="headerlink" title="Configure Servlet Bean &amp; WSDL Definition"></a>Configure Servlet Bean &amp; WSDL Definition</h2><ul>
+<li>Define the ServletRegistrationBean in configuration to register a servlet which will listen the incoming requests.</li>
+<li>Define the configuration for WSDL Definition</li>
+</ul>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">package</span> com.tutorialflix.spring.config;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">import</span> org.springframework.boot.web.servlet.ServletRegistrationBean;</span><br><span class="line"><span class="hljs-keyword">import</span> org.springframework.context.ApplicationContext;</span><br><span class="line"><span class="hljs-keyword">import</span> org.springframework.context.annotation.Bean;</span><br><span class="line"><span class="hljs-keyword">import</span> org.springframework.context.annotation.Configuration;</span><br><span class="line"><span class="hljs-keyword">import</span> org.springframework.core.io.ClassPathResource;</span><br><span class="line"><span class="hljs-keyword">import</span> org.springframework.ws.config.annotation.EnableWs;</span><br><span class="line"><span class="hljs-keyword">import</span> org.springframework.ws.config.annotation.WsConfigurerAdapter;</span><br><span class="line"><span class="hljs-keyword">import</span> org.springframework.ws.transport.http.MessageDispatcherServlet;</span><br><span class="line"><span class="hljs-keyword">import</span> org.springframework.ws.wsdl.wsdl11.DefaultWsdl11Definition;</span><br><span class="line"><span class="hljs-keyword">import</span> org.springframework.xml.xsd.SimpleXsdSchema;</span><br><span class="line"><span class="hljs-keyword">import</span> org.springframework.xml.xsd.XsdSchema;</span><br><span class="line"></span><br><span class="line"><span class="hljs-meta">@EnableWs</span></span><br><span class="line"><span class="hljs-meta">@Configuration</span></span><br><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">WebServiceConfig</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">WsConfigurerAdapter</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"> <span class="hljs-meta">@Bean</span></span><br><span class="line"> <span class="hljs-keyword">public</span> ServletRegistrationBean &lt; MessageDispatcherServlet &gt; messageDispatcherServlet(ApplicationContext applicationContext) &#123;</span><br><span class="line">  MessageDispatcherServlet servlet = <span class="hljs-keyword">new</span> MessageDispatcherServlet();</span><br><span class="line">  servlet.setApplicationContext(applicationContext);</span><br><span class="line">  servlet.setTransformWsdlLocations(<span class="hljs-keyword">true</span>);</span><br><span class="line">  <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> ServletRegistrationBean &lt; &gt; (servlet, <span class="hljs-string">"/ws/*"</span>);</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"> <span class="hljs-meta">@Bean</span>(name = <span class="hljs-string">"customer"</span>)</span><br><span class="line"> <span class="hljs-function"><span class="hljs-keyword">public</span> DefaultWsdl11Definition <span class="hljs-title">defaultWsdl11Definition</span><span class="hljs-params">(XsdSchema countriesSchema)</span> </span>&#123;</span><br><span class="line">  DefaultWsdl11Definition wsdl11Definition = <span class="hljs-keyword">new</span> DefaultWsdl11Definition();</span><br><span class="line">  wsdl11Definition.setPortTypeName(<span class="hljs-string">"CustomerServicePort"</span>);</span><br><span class="line">  wsdl11Definition.setLocationUri(<span class="hljs-string">"/ws"</span>);</span><br><span class="line">  wsdl11Definition.setTargetNamespace(<span class="hljs-string">"http://spring.tutorialflix.com/service/v1"</span>);</span><br><span class="line">  wsdl11Definition.setSchema(customerSchema());</span><br><span class="line">  <span class="hljs-keyword">return</span> wsdl11Definition;</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"> <span class="hljs-meta">@Bean</span></span><br><span class="line"> <span class="hljs-function"><span class="hljs-keyword">public</span> XsdSchema <span class="hljs-title">customerSchema</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> SimpleXsdSchema(<span class="hljs-keyword">new</span> ClassPathResource(<span class="hljs-string">"customer-service.xsd"</span>));</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p><strong>portTypeName</strong> : Interface name</p>
+</li>
+<li><p><strong>locationUri</strong> : URL to expose service</p>
+</li>
+<li><p><strong>targetNamespace</strong>: Target name space for the WSDL elements</p>
+</li>
+<li><p><strong>schema</strong>: Location of the schema</p>
+</li>
+<li><strong>@Bean(name = “customer”)</strong> :Name of this bean will be used the wsdl name.</li>
+</ul>
+<h2 id="Bootstrap-as-Spring-Boot-Application"><a href="#Bootstrap-as-Spring-Boot-Application" class="headerlink" title="Bootstrap as Spring Boot Application"></a>Bootstrap as Spring Boot Application</h2><blockquote>
+<p>Add following plugin in pom.xml to make the jar spring boot compatible.</p>
+</blockquote>
+ <figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"> <span class="hljs-tag">&lt;<span class="hljs-name">plugin</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.apache.maven.plugins<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>maven-compiler-plugin<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">configuration</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">source</span>&gt;</span>1.8<span class="hljs-tag">&lt;/<span class="hljs-name">source</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">target</span>&gt;</span>1.8<span class="hljs-tag">&lt;/<span class="hljs-name">target</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;/<span class="hljs-name">configuration</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">plugin</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">plugin</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-maven-plugin<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">plugin</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Define the main method which will allow this application to run using Spring Boot.This class should be in the root package always for the component scan.</p>
+</blockquote>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">package</span> com.tutorialflix.spring;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">import</span> org.springframework.boot.SpringApplication;</span><br><span class="line"><span class="hljs-keyword">import</span> org.springframework.boot.autoconfigure.SpringBootApplication;</span><br><span class="line"></span><br><span class="line"><span class="hljs-meta">@SpringBootApplication</span></span><br><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SpringBootSoapWebService</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"> <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line">  SpringApplication.run(SpringBootSoapWebService.class, args);</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Deploy-the-service"><a href="#Deploy-the-service" class="headerlink" title="Deploy the service"></a>Deploy the service</h2><pre><code>$ mvn spring-boot:run
+</code></pre><p>Now, you can see the WSDL at the following location<br><a href="http://localhost:8080/ws/customer.wsdl" target="_blank" rel="noopener">http://localhost:8080/ws/customer.wsdl</a></p>
+<h2 id="Test-the-service"><a href="#Test-the-service" class="headerlink" title="Test the service"></a>Test the service</h2><ul>
+<li>Import the wsdl in SOAP-UI &amp; soap-ui will auto generate request structure for the request.</li>
+</ul>
+<p><img src="/images/import-wsdl-in-soapui.png" alt="import-wsdl-in-soapui" width="400/"></p>
+<ul>
+<li>Send request to service </li>
+</ul>
+<p><img src="/images/run-request-in-soap-ui.png" alt="run-request-in-soap-ui" width="800/"></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-05-01T02:10:00.000Z">2019-05-01</time>
                 
                 <div class="level-item">
@@ -238,7 +359,11 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-04-28T01:10:04.000Z">2019-04-28</time>
+                <time class="level-item has-text-grey" datetime="2019-04-28T01:10:00.000Z">2019-04-28</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Webservices/">Webservices</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Webservices/Spring/">Spring</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Webservices/Spring/REST/">REST</a>
+                </div>
                 
                 
                 <span class="level-item has-text-grey">
@@ -333,7 +458,7 @@
                 <time class="level-item has-text-grey" datetime="2019-04-24T09:09:00.000Z">2019-04-24</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Web-Services/">Web Services</a>
+                <a class="has-link-grey -link" href="/categories/Webservices/">Webservices</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Webservices/CXF/">CXF</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Webservices/CXF/SOAP/">SOAP</a>
                 </div>
                 
                 
@@ -768,8 +893,21 @@
 <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
-            Recent
+            Récents
         </h3>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-03T15:58:00.000Z">2019-05-03</time></div>
+                    <a href="/How-to-create-soap-webservice-using-spring-boot/" class="has-link-black-ter is-size-6">How to create SOAP webservice using Spring-WS &amp; Spring Boot</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Webservices/">Webservices</a> / <a class="has-link-grey -link" href="/categories/Webservices/Spring/">Spring</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -788,10 +926,10 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-28T01:10:04.000Z">2019-04-28</time></div>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-28T01:10:00.000Z">2019-04-28</time></div>
                     <a href="/Developing-REST-Service-using-Spring-Boot/" class="has-link-black-ter is-size-6">Developing REST Service using Spring Boot</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/Webservices/">Webservices</a> / <a class="has-link-grey -link" href="/categories/Webservices/Spring/">Spring</a>
                     </p>
                 </div>
             </div>
@@ -804,7 +942,7 @@
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-24T09:09:00.000Z">2019-04-24</time></div>
                     <a href="/Developing-SOAP-Web-service-using-Apache-CXF-and-Apache-Camel/" class="has-link-black-ter is-size-6">Developing SOAP Web service using Apache CXF and Apache Camel</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Web-Services/">Web Services</a>
+                        <a class="has-link-grey -link" href="/categories/Webservices/">Webservices</a> / <a class="has-link-grey -link" href="/categories/Webservices/CXF/">CXF</a>
                     </p>
                 </div>
             </div>
@@ -823,19 +961,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-14T18:03:00.000Z">2019-04-15</time></div>
-                    <a href="/How-to-create-a-WSDL-file/" class="has-link-black-ter is-size-6">How to create a WSDL file</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/SOAP/">SOAP</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -847,7 +972,7 @@
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                Categories
+                Catégories
             </h3>
             <ul class="menu-list">
             <li>
@@ -883,14 +1008,30 @@
                 <span class="level-item tag">1</span>
             </span>
         </a></li><li>
-        <a class="level is-marginless" href="/categories/Web-Services/">
+        <a class="level is-marginless" href="/categories/Webservices/">
             <span class="level-start">
-                <span class="level-item">Web Services</span>
+                <span class="level-item">Webservices</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">3</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/Webservices/CXF/">
+            <span class="level-start">
+                <span class="level-item">CXF</span>
             </span>
             <span class="level-end">
                 <span class="level-item tag">1</span>
             </span>
-        </a></li>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Webservices/Spring/">
+            <span class="level-start">
+                <span class="level-item">Spring</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li></ul></li>
             </ul>
         </div>
     </div>
@@ -1024,7 +1165,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
     
 
-<a id="back-to-top" title="Back to Top" href="javascript:;">
+<a id="back-to-top" title="Kembali ke atas" href="javascript:;">
     <i class="fas fa-chevron-up"></i>
 </a>
 <script src="/js/back-to-top.js" defer></script>
@@ -1070,9 +1211,9 @@ document.addEventListener('DOMContentLoaded', function () {
     (function (window) {
         var INSIGHT_CONFIG = {
             TRANSLATION: {
-                POSTS: 'Posts',
+                POSTS: 'Articles',
                 PAGES: 'Pages',
-                CATEGORIES: 'Categories',
+                CATEGORIES: 'Catégories',
                 TAGS: 'Tags',
                 UNTITLED: '(Untitled)',
             },
