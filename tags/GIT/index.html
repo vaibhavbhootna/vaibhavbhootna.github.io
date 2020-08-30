@@ -187,7 +187,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    a few seconds read (About 88 words)
+                    a few seconds read (About 75 words)
                 </span>
                 
                 
@@ -220,12 +220,15 @@
 
 
         <div class="content">
-            <h2 id="How-to-remove-the-unwanted-file-content-from-the-GIT-commit"><a href="#How-to-remove-the-unwanted-file-content-from-the-GIT-commit" class="headerlink" title="How to remove the unwanted file/content from the GIT commit."></a>How to remove the unwanted file/content from the GIT commit.</h2><p>Use the below command to change the position of HEAD of your branch.<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset --soft HEAD^</span><br></pre></td></tr></table></figure></p>
-<p>or<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset --soft HEAD~1</span><br></pre></td></tr></table></figure></p>
-<p>If you just want to modify the content of the file. Edit the file directly. Alterantively  if you want to remove the file from the commit then use below command.<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset HEAD path/to/unwanted_file</span><br></pre></td></tr></table></figure></p>
-<p>or</p>
-<p>Now commit again, you can even re-use the same commit message:<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -c ORIG_HEAD</span><br></pre></td></tr></table></figure></p>
-
+            <p>Use the below command to change the position of HEAD of your branch. </p>
+<pre><code>git reset --soft HEAD^ 
+</code></pre><p>or</p>
+<pre><code>git reset --soft HEAD~1
+</code></pre><p>If you want to modify the content of the file. Edit the file directly. Alterantively  if you want to remove the file from the commit then use below command.</p>
+<pre><code>git reset HEAD path/to/unwanted_file
+</code></pre><p>Now commit again, you can even re-use the same commit message:</p>
+<pre><code>git commit -c ORIG_HEAD
+</code></pre>
         </div>
         
         
