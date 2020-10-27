@@ -177,6 +177,92 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2020-10-27T11:27:00.000Z">2020-10-27</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Spring/">Spring</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Spring/Java/">Java</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Spring/Java/How-to/">How to</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Spring/Java/How-to/Soap/">Soap</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    2 minutes read (About 291 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/Migrate-Spring-Boot-Service-from-JDK-1-8-to-JDK-11-or-higher/">Migrate Spring Boot Service from JDK 1.8 to JDK 11 or higher</a>
+            
+        </h1>
+        
+    <hr>
+<div class="level-left author">
+            
+            
+                <span class="level-item has-text-grey" style="padding: 10px;  display: inline-flex;
+                vertical-align: top;">
+                    <a style="color: #808080" href="#">Vaibhav Bhootna
+                    <br> 
+                    Software Engineer
+                </a>
+                </span>
+        
+           
+</div>
+<hr>
+
+
+        <div class="content">
+            <p><strong>Step 1.</strong> Install OpenJDK 11 and set the <strong>JAVA_HOME</strong> environment variable. Make sure you check the installed java version by using below mentioned command.<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ java -version </span><br><span class="line">java version &quot;11.0.9&quot; 2020-10-20 LTS</span><br><span class="line">Java(TM) SE Runtime Environment 18.9 (build 11.0.9+7-LTS)</span><br><span class="line">Java HotSpot(TM) 64-Bit Server VM 18.9 (build 11.0.9+7-LTS, mixed mode)</span><br></pre></td></tr></table></figure></p>
+<p><strong>Step 2.</strong> Update the spring-boot version to the latest. In my case, I have update it to 2.3.3.RELEASE</p>
+<ul>
+<li>If you are using dependencyManagement use below mentioned code</li>
+</ul>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependencyManagement&gt;</span><br><span class="line">    &lt;dependencies&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;spring-boot-dependencies&lt;/artifactId&gt;</span><br><span class="line">            &lt;version&gt;2.3.3.RELEASE&lt;/version&gt;</span><br><span class="line">            &lt;type&gt;pom&lt;/type&gt;</span><br><span class="line">            &lt;scope&gt;import&lt;/scope&gt;</span><br><span class="line">        &lt;/dependency&gt;</span><br><span class="line">    &lt;/dependencies&gt;</span><br><span class="line">&lt;/dependencyManagement&gt;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>If you are using parent pom then use below mentioned code</li>
+</ul>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;parent&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-boot-dependencies&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;2.3.3.RELEASE&lt;/version&gt;</span><br><span class="line">&lt;/parent&gt;</span><br></pre></td></tr></table></figure>
+<p><strong>Step 3.</strong> Use maven-compiler plugin to compile the code with JDK 11/12</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;build&gt;</span><br><span class="line">    &lt;plugins&gt;</span><br><span class="line">        &lt;plugin&gt;</span><br><span class="line">            &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;</span><br><span class="line">            &lt;version&gt;3.5.1&lt;/version&gt;</span><br><span class="line">            &lt;configuration&gt;</span><br><span class="line">                &lt;source&gt;11&lt;/source&gt;</span><br><span class="line">                &lt;target&gt;11&lt;/target&gt;</span><br><span class="line">            &lt;/configuration&gt;</span><br><span class="line">        &lt;/plugin&gt;</span><br><span class="line">    &lt;/plugins&gt;</span><br><span class="line">&lt;/build&gt;</span><br></pre></td></tr></table></figure>
+<p>Now if you try to build and run the project, you might get one of the below mentioned error</p>
+<pre><code>java.lang.NoClassDefFoundError: javax/xml/ws/handler/soap/SOAPHandler
+</code></pre><p>or</p>
+<pre><code>java.lang.TypeNotPresentException: Type javax.xml.ws.handler.Handler not present
+</code></pre><p>or</p>
+<pre><code>java.lang.NoClassDefFoundError: javax/xml/bind/JAXBException
+</code></pre><p>The reason why you are getting this error is because the JAXB APIs are considered to be Java EE APIs and therefore are no longer contained on the default classpath in Java SE 9. In Java 11, they are completely removed from the JDK. Refer <a href="https://blogs.oracle.com/javamagazine/transition-from-java-ee-to-jakarta-ee?source=:em:nw:mt::RC_WWMK190726P00001:NSL400052571" target="_blank" rel="noopener">this article</a> for more details </p>
+<p><strong>Step 4.</strong> To resolve this error, add the following dependencies in you pom.xml</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;jakarta.xml.ws&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;jakarta.xml.ws-api&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;2.3.3&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;javax.xml.ws&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;jaxws-api&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;2.3.1&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+<p><strong>Step 5.</strong> Run the command to build the project</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn clean install</span><br></pre></td></tr></table></figure>
+<p>Now you should be able to run the project successfully. If you get any error, please comment below in the comment section.</p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-04-24T09:09:00.000Z">2019-04-24</time>
                 
                 <div class="level-item">
@@ -470,6 +556,19 @@
             
             <div class="media-content">
                 <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-10-27T11:27:00.000Z">2020-10-27</time></div>
+                    <a href="/Migrate-Spring-Boot-Service-from-JDK-1-8-to-JDK-11-or-higher/" class="has-link-black-ter is-size-6">Migrate Spring Boot Service from JDK 1.8 to JDK 11 or higher</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Spring/">Spring</a> / <a class="has-link-grey -link" href="/categories/Spring/Java/">Java</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-10-26T04:33:18.000Z">2020-10-26</time></div>
                     <a href="/How-to-install-JDK-11-on-mac-using-Homebrew/" class="has-link-black-ter is-size-6">How to install JDK 11 on mac using Homebrew</a>
                     <p class="is-size-7 is-uppercase">
@@ -518,19 +617,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-03T15:58:00.000Z">2019-05-03</time></div>
-                    <a href="/How-to-create-soap-webservice-using-spring-boot/" class="has-link-black-ter is-size-6">How to create SOAP webservice using Spring-WS &amp; Spring Boot</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Webservices/">Webservices</a> / <a class="has-link-grey -link" href="/categories/Webservices/Spring/">Spring</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -567,9 +653,17 @@
                 <span class="level-item">Spring</span>
             </span>
             <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/Spring/Java/">
+            <span class="level-start">
+                <span class="level-item">Java</span>
+            </span>
+            <span class="level-end">
                 <span class="level-item tag">1</span>
             </span>
-        </a></li><li>
+        </a></li></ul></li><li>
         <a class="level is-marginless" href="/categories/VCS/">
             <span class="level-start">
                 <span class="level-item">VCS</span>
