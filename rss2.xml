@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>TutorialFlix | Collection of technology tutorials</title>
+    <link>http://www.tutorialflix.com/</link>
+    
+    <image>
+      <url>http://www.tutorialflix.com/icon.png</url>
+      <title>TutorialFlix | Collection of technology tutorials</title>
+      <link>http://www.tutorialflix.com/</link>
+    </image>
+    
+    <atom:link href="http://www.tutorialflix.com/rss2.xml" rel="self" type="application/rss+xml"/>
+    
+    <description>Collection of technology tutorials</description>
+    <pubDate>Wed, 28 Oct 2020 07:22:48 GMT</pubDate>
+    <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Migrate Spring Boot Service from JDK 1.8 to JDK 11 or higher</title>
+      <link>http://www.tutorialflix.com/Migrate-Spring-Boot-Service-from-JDK-1-8-to-JDK-11-or-higher/</link>
+      <guid>http://www.tutorialflix.com/Migrate-Spring-Boot-Service-from-JDK-1-8-to-JDK-11-or-higher/</guid>
+      <pubDate>Tue, 27 Oct 2020 11:27:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;&lt;strong&gt;Step 1.&lt;/strong&gt; Install OpenJDK 11 and set the &lt;strong&gt;JAVA_HOME&lt;/strong&gt; environment variable. Make sure you check the</description>
+          
+        
+      
+      
+      
+      
+      <category domain="http://www.tutorialflix.com/categories/Spring/">Spring</category>
+      
+      <category domain="http://www.tutorialflix.com/categories/Spring/Java/">Java</category>
+      
+      <category domain="http://www.tutorialflix.com/categories/Spring/Java/How-to/">How to</category>
+      
+      <category domain="http://www.tutorialflix.com/categories/Spring/Java/How-to/Soap/">Soap</category>
+      
+      
+      <category domain="http://www.tutorialflix.com/tags/Spring/">Spring</category>
+      
+      <category domain="http://www.tutorialflix.com/tags/Java/">Java</category>
+      
+      <category domain="http://www.tutorialflix.com/tags/SpringBoot/">SpringBoot</category>
+      
+      <category domain="http://www.tutorialflix.com/tags/JDK11/">JDK11</category>
+      
+      <category domain="http://www.tutorialflix.com/tags/Migration/">Migration</category>
+      
+      <category domain="http://www.tutorialflix.com/tags/JDK/">JDK</category>
+      
+      
+      <comments>http://www.tutorialflix.com/Migrate-Spring-Boot-Service-from-JDK-1-8-to-JDK-11-or-higher/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>How to install JDK 11 on mac using Homebrew</title>
+      <link>http://www.tutorialflix.com/How-to-install-JDK-11-on-mac-using-Homebrew/</link>
+      <guid>http://www.tutorialflix.com/How-to-install-JDK-11-on-mac-using-Homebrew/</guid>
+      <pubDate>Mon, 26 Oct 2020 04:33:18 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;&lt;strong&gt;Step 1.&lt;/strong&gt; Install Homebrew (skip this step,  if already installed)&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ /bin/bash -c &amp;quot;$(curl -fsSL</description>
+          
+        
+      
+      
+      
+      
+      <category domain="http://www.tutorialflix.com/categories/devops/">devops</category>
+      
+      <category domain="http://www.tutorialflix.com/categories/devops/How-to/">How to</category>
+      
+      
+      <category domain="http://www.tutorialflix.com/tags/installation/">installation</category>
+      
+      <category domain="http://www.tutorialflix.com/tags/devops/">devops</category>
+      
+      <category domain="http://www.tutorialflix.com/tags/mac/">mac</category>
+      
+      <category domain="http://www.tutorialflix.com/tags/homebrew/">homebrew</category>
+      
+      <category domain="http://www.tutorialflix.com/tags/brew/">brew</category>
+      
+      <category domain="http://www.tutorialflix.com/tags/jdk/">jdk</category>
+      
+      <category domain="http://www.tutorialflix.com/tags/jdk11/">jdk11</category>
+      
+      
+      <comments>http://www.tutorialflix.com/How-to-install-JDK-11-on-mac-using-Homebrew/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>How to remove files from Git commit</title>
+      <link>http://www.tutorialflix.com/How-to-remove-files-from-Git-commit/</link>
+      <guid>http://www.tutorialflix.com/How-to-remove-files-from-Git-commit/</guid>
+      <pubDate>Sat, 29 Aug 2020 06:00:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;Use the below command to change the position of HEAD of your branch. &lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git reset --soft HEAD^</description>
+          
+        
+      
+      
+      
+      
+      <category domain="http://www.tutorialflix.com/categories/VCS/">VCS</category>
+      
+      <category domain="http://www.tutorialflix.com/categories/VCS/How-to/">How to</category>
+      
+      
+      <category domain="http://www.tutorialflix.com/tags/GIT/">GIT</category>
+      
+      
+      <comments>http://www.tutorialflix.com/How-to-remove-files-from-Git-commit/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>How to configure passwordless ssh and scp</title>
+      <link>http://www.tutorialflix.com/How-to-configure-passwordless-ssh-and-scp/</link>
+      <guid>http://www.tutorialflix.com/How-to-configure-passwordless-ssh-and-scp/</guid>
+      <pubDate>Thu, 09 May 2019 16:11:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h3 id=&quot;Create-pair-of-private-key-and-public-key&quot;&gt;&lt;a href=&quot;#Create-pair-of-private-key-and-public-key&quot; class=&quot;headerlink&quot; title=&quot;Create</description>
+          
+        
+      
+      
+      
+      
+      <category domain="http://www.tutorialflix.com/categories/unix/">unix</category>
+      
+      
+      <category domain="http://www.tutorialflix.com/tags/unix/">unix</category>
+      
+      
+      <comments>http://www.tutorialflix.com/How-to-configure-passwordless-ssh-and-scp/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>How to implement security in SOAP webservice using Spring-WS</title>
+      <link>http://www.tutorialflix.com/How-to-implement-security-in-SOAP-webservice-using-Spring-WS/</link>
+      <guid>http://www.tutorialflix.com/How-to-implement-security-in-SOAP-webservice-using-Spring-WS/</guid>
+      <pubDate>Sun, 05 May 2019 12:57:53 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h2 id=&quot;Overview&quot;&gt;&lt;a href=&quot;#Overview&quot; class=&quot;headerlink&quot; title=&quot;Overview&quot;&gt;&lt;/a&gt;Overview&lt;/h2&gt;&lt;p&gt;In this tutorial, we’ll see how to implement</description>
+          
+        
+      
+      
+      
+      
+      
+      
+      <comments>http://www.tutorialflix.com/How-to-implement-security-in-SOAP-webservice-using-Spring-WS/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>How to create SOAP webservice using Spring-WS &amp; Spring Boot</title>
+      <link>http://www.tutorialflix.com/How-to-create-soap-webservice-using-spring-boot/</link>
+      <guid>http://www.tutorialflix.com/How-to-create-soap-webservice-using-spring-boot/</guid>
+      <pubDate>Fri, 03 May 2019 15:58:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h2 id=&quot;Overview&quot;&gt;&lt;a href=&quot;#Overview&quot; class=&quot;headerlink&quot; title=&quot;Overview&quot;&gt;&lt;/a&gt;Overview&lt;/h2&gt;&lt;p&gt;In this tutorial, we’ll see how to create a</description>
+          
+        
+      
+      
+      
+      
+      <category domain="http://www.tutorialflix.com/categories/Webservices/">Webservices</category>
+      
+      <category domain="http://www.tutorialflix.com/categories/Webservices/Spring/">Spring</category>
+      
+      <category domain="http://www.tutorialflix.com/categories/Webservices/Spring/soap/">soap</category>
+      
+      
+      <category domain="http://www.tutorialflix.com/tags/Spring/">Spring</category>
+      
+      <category domain="http://www.tutorialflix.com/tags/Webservices/">Webservices</category>
+      
+      
+      <comments>http://www.tutorialflix.com/How-to-create-soap-webservice-using-spring-boot/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>How to create a maven project</title>
+      <link>http://www.tutorialflix.com/How-to-create-a-maven-project/</link>
+      <guid>http://www.tutorialflix.com/How-to-create-a-maven-project/</guid>
+      <pubDate>Wed, 01 May 2019 02:10:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h2 id=&quot;Steps&quot;&gt;&lt;a href=&quot;#Steps&quot; class=&quot;headerlink&quot; title=&quot;Steps&quot;&gt;&lt;/a&gt;&lt;u&gt;Steps&lt;/u&gt;&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;Open</description>
+          
+        
+      
+      
+      
+      
+      <category domain="http://www.tutorialflix.com/categories/How-to/">How to</category>
+      
+      <category domain="http://www.tutorialflix.com/categories/How-to/Java/">Java</category>
+      
+      
+      <category domain="http://www.tutorialflix.com/tags/Apache-Maven/">Apache Maven</category>
+      
+      
+      <comments>http://www.tutorialflix.com/How-to-create-a-maven-project/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Developing REST Service using Spring Boot</title>
+      <link>http://www.tutorialflix.com/Developing-REST-Service-using-Spring-Boot/</link>
+      <guid>http://www.tutorialflix.com/Developing-REST-Service-using-Spring-Boot/</guid>
+      <pubDate>Sun, 28 Apr 2019 01:10:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h2 id=&quot;Overview&quot;&gt;&lt;a href=&quot;#Overview&quot; class=&quot;headerlink&quot; title=&quot;Overview&quot;&gt;&lt;/a&gt;Overview&lt;/h2&gt;&lt;p&gt;The tutorial will show, how to develop a REST</description>
+          
+        
+      
+      
+      
+      
+      <category domain="http://www.tutorialflix.com/categories/Webservices/">Webservices</category>
+      
+      <category domain="http://www.tutorialflix.com/categories/Webservices/Spring/">Spring</category>
+      
+      <category domain="http://www.tutorialflix.com/categories/Webservices/Spring/REST/">REST</category>
+      
+      
+      <category domain="http://www.tutorialflix.com/tags/Spring/">Spring</category>
+      
+      <category domain="http://www.tutorialflix.com/tags/Rest/">Rest</category>
+      
+      <category domain="http://www.tutorialflix.com/tags/Spring-Boot/">Spring Boot</category>
+      
+      <category domain="http://www.tutorialflix.com/tags/Webservices/">Webservices</category>
+      
+      
+      <comments>http://www.tutorialflix.com/Developing-REST-Service-using-Spring-Boot/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Developing SOAP Web service using Apache CXF and Apache Camel</title>
+      <link>http://www.tutorialflix.com/Developing-SOAP-Web-service-using-Apache-CXF-and-Apache-Camel/</link>
+      <guid>http://www.tutorialflix.com/Developing-SOAP-Web-service-using-Apache-CXF-and-Apache-Camel/</guid>
+      <pubDate>Wed, 24 Apr 2019 09:09:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h3 id=&quot;Overview&quot;&gt;&lt;a href=&quot;#Overview&quot; class=&quot;headerlink&quot; title=&quot;Overview&quot;&gt;&lt;/a&gt;Overview&lt;/h3&gt;&lt;p&gt;In  this post, we will walk through the steps</description>
+          
+        
+      
+      
+      
+      
+      <category domain="http://www.tutorialflix.com/categories/Webservices/">Webservices</category>
+      
+      <category domain="http://www.tutorialflix.com/categories/Webservices/CXF/">CXF</category>
+      
+      <category domain="http://www.tutorialflix.com/categories/Webservices/CXF/SOAP/">SOAP</category>
+      
+      
+      <category domain="http://www.tutorialflix.com/tags/Spring/">Spring</category>
+      
+      <category domain="http://www.tutorialflix.com/tags/Java/">Java</category>
+      
+      <category domain="http://www.tutorialflix.com/tags/SOAP/">SOAP</category>
+      
+      <category domain="http://www.tutorialflix.com/tags/Camel/">Camel</category>
+      
+      <category domain="http://www.tutorialflix.com/tags/CXF/">CXF</category>
+      
+      
+      <comments>http://www.tutorialflix.com/Developing-SOAP-Web-service-using-Apache-CXF-and-Apache-Camel/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>How to load property file in java</title>
+      <link>http://www.tutorialflix.com/How-to-load-property-file-in-java/</link>
+      <guid>http://www.tutorialflix.com/How-to-load-property-file-in-java/</guid>
+      <pubDate>Tue, 23 Apr 2019 22:44:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h2 id=&quot;Overview&quot;&gt;&lt;a href=&quot;#Overview&quot; class=&quot;headerlink&quot; title=&quot;Overview&quot;&gt;&lt;/a&gt;Overview&lt;/h2&gt;&lt;p&gt;Application mostly require a file to store</description>
+          
+        
+      
+      
+      
+      
+      <category domain="http://www.tutorialflix.com/categories/How-to/">How to</category>
+      
+      <category domain="http://www.tutorialflix.com/categories/How-to/Java/">Java</category>
+      
+      
+      <category domain="http://www.tutorialflix.com/tags/Java/">Java</category>
+      
+      
+      <comments>http://www.tutorialflix.com/How-to-load-property-file-in-java/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>How to create a WSDL file</title>
+      <link>http://www.tutorialflix.com/How-to-create-a-WSDL-file/</link>
+      <guid>http://www.tutorialflix.com/How-to-create-a-WSDL-file/</guid>
+      <pubDate>Sun, 14 Apr 2019 18:03:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h2 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot; title=&quot;Introduction&quot;&gt;&lt;/a&gt;Introduction&lt;/h2&gt;&lt;p&gt;WSDL stands for Web Services</description>
+          
+        
+      
+      
+      
+      
+      <category domain="http://www.tutorialflix.com/categories/Webservices/">Webservices</category>
+      
+      <category domain="http://www.tutorialflix.com/categories/Webservices/Soap/">Soap</category>
+      
+      
+      <category domain="http://www.tutorialflix.com/tags/Webservices/">Webservices</category>
+      
+      <category domain="http://www.tutorialflix.com/tags/SOAP/">SOAP</category>
+      
+      <category domain="http://www.tutorialflix.com/tags/Middleware/">Middleware</category>
+      
+      <category domain="http://www.tutorialflix.com/tags/WSDL/">WSDL</category>
+      
+      
+      <comments>http://www.tutorialflix.com/How-to-create-a-WSDL-file/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>SOAP -  Simple Object Access Protocol</title>
+      <link>http://www.tutorialflix.com/SOAP/</link>
+      <guid>http://www.tutorialflix.com/SOAP/</guid>
+      <pubDate>Sat, 13 Apr 2019 23:42:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h2 id=&quot;What-is-SOAP&quot;&gt;&lt;a href=&quot;#What-is-SOAP&quot; class=&quot;headerlink&quot; title=&quot;What is SOAP ?&quot;&gt;&lt;/a&gt;What is SOAP ?&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Simple Object</description>
+          
+        
+      
+      
+      
+      
+      <category domain="http://www.tutorialflix.com/categories/Webservices/">Webservices</category>
+      
+      <category domain="http://www.tutorialflix.com/categories/Webservices/Soap/">Soap</category>
+      
+      
+      <category domain="http://www.tutorialflix.com/tags/Webservices/">Webservices</category>
+      
+      <category domain="http://www.tutorialflix.com/tags/SOAP/">SOAP</category>
+      
+      <category domain="http://www.tutorialflix.com/tags/Middleware/">Middleware</category>
+      
+      
+      <comments>http://www.tutorialflix.com/SOAP/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Create a Web Application with Spring 5</title>
+      <link>http://www.tutorialflix.com/Create-a-Web-Application-with-Spring-5/</link>
+      <guid>http://www.tutorialflix.com/Create-a-Web-Application-with-Spring-5/</guid>
+      <pubDate>Sun, 07 Apr 2019 06:20:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h2 id=&quot;Overview&quot;&gt;&lt;a href=&quot;#Overview&quot; class=&quot;headerlink&quot; title=&quot;Overview&quot;&gt;&lt;/a&gt;Overview&lt;/h2&gt;&lt;p&gt;The tutorial illustrates how to Create a Web</description>
+          
+        
+      
+      
+      
+      
+      <category domain="http://www.tutorialflix.com/categories/Spring/">Spring</category>
+      
+      
+      <category domain="http://www.tutorialflix.com/tags/Spring/">Spring</category>
+      
+      <category domain="http://www.tutorialflix.com/tags/Java/">Java</category>
+      
+      
+      <comments>http://www.tutorialflix.com/Create-a-Web-Application-with-Spring-5/#disqus_thread</comments>
+      
+    </item>
+    
+  </channel>
+</rss>
