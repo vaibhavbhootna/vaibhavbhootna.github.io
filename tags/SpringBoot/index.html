@@ -97,7 +97,7 @@
 <link rel="alternate" href="/atom.xml" title="TutorialFlix | Collection of technology tutorials" type="application/atom+xml">
 <link rel="alternate" href="/rss2.xml" title="TutorialFlix | Collection of technology tutorials" type="application/rss+xml">
 </head>
-<body class="is-2-column">
+<body class="is-3-column">
     <nav class="navbar navbar-main">
     <div class="container">
         <div class="navbar-brand is-flex-center">
@@ -160,9 +160,22 @@
 </nav>
     
     <section class="section">
-        <div class="container">
+        <div class="container-fluid">
             <div class="columns">
-                <div class="column is-9-tablet is-9-desktop is-9-widescreen has-order-2 column-main"><div class="card">
+                <div id="centreAds" style="margin: auto;">
+                      <script type="text/javascript" language="javascript">
+    var aax_size='728x90';
+    var aax_pubname = 'tutorialflix-21';
+    var aax_src='302';
+    if(window.innerWidth < 728){
+      aax_size='300x250';
+    }
+  </script>
+  <script type="text/javascript" language="javascript" src="http://c.amazon-adsystem.com/aax2/assoc.js"></script>
+                </div> 
+            </div>
+            <div class="columns">
+                <div class="column is-10-tablet is-10-desktop is-8-widescreen has-order-2 column-main"><div class="card">
     <div class="card-content">
         <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul>
@@ -179,17 +192,17 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2020-10-27T11:27:00.000Z">2020-10-27</time>
+                <time class="level-item has-text-grey" datetime="2019-04-28T01:10:00.000Z">2019-04-28</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Spring/">Spring</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Spring/Java/">Java</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Spring/Java/How-to/">How to</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Spring/Java/How-to/Soap/">Soap</a>
+                <a class="has-link-grey -link" href="/categories/Java/">Java</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Java/Spring/">Spring</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Java/Spring/Boot/">Boot</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Java/Spring/Boot/Rest/">Rest</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    2 minutes read (About 291 words)
+                    3 minutes read (About 485 words)
                 </span>
                 
                 
@@ -198,45 +211,168 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/Migrate-Spring-Boot-Service-from-JDK-1-8-to-JDK-11-or-higher/">Migrate Spring Boot Service from JDK 1.8 to JDK 11 or higher</a>
+                <a class="has-link-black-ter" href="/Developing-REST-Service-using-Spring-Boot/">Developing REST Service using Spring Boot</a>
             
         </h1>
         
     <hr>
     <div class="level-left author">
-            <img src="/images/author/vaibhav_bhootna.jpg" style="border-radius: 50%; border: 1px solid gray" width="50">
+        <img src="/images/author/vaibhav_bhootna.jpg" style="border-radius: 50%; border: 1px solid gray" width="50">
             <span class="level-item has-text-grey" style="padding: 10px;  display: inline-flex;                vertical-align: top;">
                 <a style="color: #808080" href="#">Vaibhav Bhootna
-                    <br>                     Software Engineer                                    
+                    <br>
+                    
+                        Software Engineer
+                                        
                 </a>
             </span>
         </div>
         <hr>
         <div class="content">
-            <p><strong>Step 1.</strong> Install OpenJDK 11 and set the <strong>JAVA_HOME</strong> environment variable. Make sure you check the installed java version by using below mentioned command.<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ java -version </span><br><span class="line">java version &quot;11.0.9&quot; 2020-10-20 LTS</span><br><span class="line">Java(TM) SE Runtime Environment 18.9 (build 11.0.9+7-LTS)</span><br><span class="line">Java HotSpot(TM) 64-Bit Server VM 18.9 (build 11.0.9+7-LTS, mixed mode)</span><br></pre></td></tr></table></figure></p>
-<p><strong>Step 2.</strong> Update the spring-boot version to the latest. In my case, I have update it to 2.3.3.RELEASE</p>
-<ul>
-<li>If you are using dependencyManagement use below mentioned code</li>
+            <h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p>The tutorial will show, how to develop a REST API with Spring. We’ll look into the <strong>Spring Boot</strong> solution for creating the application. </p>
+<p>We’ll primarily use <strong>Java configuration</strong> in this tutorial.</p>
+<h2 id="Pre-requisties"><a href="#Pre-requisties" class="headerlink" title="Pre-requisties"></a>Pre-requisties</h2><ul>
+<li>JDK 1.8</li>
+<li>Maven</li>
+<li>IDE (for ease of use)</li>
 </ul>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependencyManagement&gt;</span><br><span class="line">    &lt;dependencies&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;spring-boot-dependencies&lt;/artifactId&gt;</span><br><span class="line">            &lt;version&gt;2.3.3.RELEASE&lt;/version&gt;</span><br><span class="line">            &lt;type&gt;pom&lt;/type&gt;</span><br><span class="line">            &lt;scope&gt;import&lt;/scope&gt;</span><br><span class="line">        &lt;/dependency&gt;</span><br><span class="line">    &lt;/dependencies&gt;</span><br><span class="line">&lt;/dependencyManagement&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="Setup-maven-project"><a href="#Setup-maven-project" class="headerlink" title="Setup maven project"></a>Setup maven project</h2><p> Creat a maven project and add the required dependencies and plugins in pom.xml</p>
+<p>We will use the dependencyManagement to define a standard version of an artifact to use across multiple projects. </p>
+<p>We will allow <strong>spring-boot-starter-parent</strong> to manage the version of the artifacts.</p>
+<figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">dependencyManagement</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">dependencies</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line">            <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span></span><br><span class="line">            <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-starter-parent<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>2.1.3.RELEASE<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span></span><br><span class="line">            <span class="hljs-tag">&lt;<span class="hljs-name">type</span>&gt;</span>pom<span class="hljs-tag">&lt;/<span class="hljs-name">type</span>&gt;</span></span><br><span class="line">            <span class="hljs-tag">&lt;<span class="hljs-name">scope</span>&gt;</span>import<span class="hljs-tag">&lt;/<span class="hljs-name">scope</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;/<span class="hljs-name">dependencies</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">dependencyManagement</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>Now we’ll add the spring-boot-starter-web dependency.</p>
+<p>Spring Boot Starter Web includes:</p>
 <ul>
-<li>If you are using parent pom then use below mentioned code</li>
+<li>spring-web module</li>
+<li>spring-webmvc module</li>
+<li>tomcat starter </li>
 </ul>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;parent&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-boot-dependencies&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;2.3.3.RELEASE&lt;/version&gt;</span><br><span class="line">&lt;/parent&gt;</span><br></pre></td></tr></table></figure>
-<p><strong>Step 3.</strong> Use maven-compiler plugin to compile the code with JDK 11/12</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;build&gt;</span><br><span class="line">    &lt;plugins&gt;</span><br><span class="line">        &lt;plugin&gt;</span><br><span class="line">            &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;</span><br><span class="line">            &lt;version&gt;3.5.1&lt;/version&gt;</span><br><span class="line">            &lt;configuration&gt;</span><br><span class="line">                &lt;source&gt;11&lt;/source&gt;</span><br><span class="line">                &lt;target&gt;11&lt;/target&gt;</span><br><span class="line">            &lt;/configuration&gt;</span><br><span class="line">        &lt;/plugin&gt;</span><br><span class="line">    &lt;/plugins&gt;</span><br><span class="line">&lt;/build&gt;</span><br></pre></td></tr></table></figure>
-<p>Now if you try to build and run the project, you might get one of the below mentioned error</p>
-<pre><code>java.lang.NoClassDefFoundError: javax/xml/ws/handler/soap/SOAPHandler
-</code></pre><p>or</p>
-<pre><code>java.lang.TypeNotPresentException: Type javax.xml.ws.handler.Handler not present
-</code></pre><p>or</p>
-<pre><code>java.lang.NoClassDefFoundError: javax/xml/bind/JAXBException
-</code></pre><p>The reason why you are getting this error is because the JAXB APIs are considered to be Java EE APIs and therefore are no longer contained on the default classpath in Java SE 9. In Java 11, they are completely removed from the JDK. Refer <a href="https://blogs.oracle.com/javamagazine/transition-from-java-ee-to-jakarta-ee?source=:em:nw:mt::RC_WWMK190726P00001:NSL400052571" target="_blank" rel="noopener">this article</a> for more details </p>
-<p><strong>Step 4.</strong> To resolve this error, add the following dependencies in you pom.xml</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;jakarta.xml.ws&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;jakarta.xml.ws-api&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;2.3.3&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;javax.xml.ws&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;jaxws-api&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;2.3.1&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
-<p><strong>Step 5.</strong> Run the command to build the project</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn clean install</span><br></pre></td></tr></table></figure>
-<p>Now you should be able to run the project successfully. If you get any error, please comment below in the comment section.</p>
+<p><strong>Spring-web &amp; Spring-webmvc</strong> are required for spring appplication while tomcat starter is required to run web application directly without explicitly installing any server.</p>
+<figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">dependencies</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-starter-web<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">dependencies</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>Spring Boot Maven Plugin</strong> provides Spring Boot support in Maven, letting you package executable jar or war archives and run an application “in-place”. </p>
+<figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">build</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">plugins</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">plugin</span>&gt;</span></span><br><span class="line">            <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span></span><br><span class="line">            <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-maven-plugin<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;/<span class="hljs-name">plugin</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;/<span class="hljs-name">plugins</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">build</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="Creating-a-Spring-Boot-Application"><a href="#Creating-a-Spring-Boot-Application" class="headerlink" title="Creating a Spring Boot Application"></a>Creating a Spring Boot Application</h3><p>Create a class with main method. Annotate the class with @SpringBootApplication. Call the run method of <strong>SpringApplication class</strong> </p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">package</span> com.tutorialflix.spring.web;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">import</span> org.springframework.boot.SpringApplication;</span><br><span class="line"><span class="hljs-keyword">import</span> org.springframework.boot.autoconfigure.SpringBootApplication;</span><br><span class="line"></span><br><span class="line"><span class="hljs-meta">@SpringBootApplication</span></span><br><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SpringBootWebApplication</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line">		SpringApplication.run(SpringBootWebApplication.class, args);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>@SpringBootApplication</strong> includes the functionality of following annotations:</p>
+<ul>
+<li>@Configuration </li>
+<li>@EnableAutoConfiguration</li>
+<li>@ComponentScan.</li>
+</ul>
+<p><strong> By default, it will perform the component scan in base package. So make sure <u>SpringBootWebApplication</u> class is present in the base package.</strong></p>
+<h3 id="Creating-a-REST-Controller"><a href="#Creating-a-REST-Controller" class="headerlink" title="Creating a REST Controller"></a>Creating a REST Controller</h3><p>Create a class with a meaningful name based on your requirement &amp; annotate the class with <strong>@RestController</strong>. <strong>The  @RestController  is the central artifact in the entire Web Tier of the RESTful API.</strong> </p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">package</span> com.tutorialflix.spring.web.contrroller;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">import</span> org.springframework.stereotype.RestController;</span><br><span class="line"></span><br><span class="line"><span class="hljs-meta">@RestController</span></span><br><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyRestController</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Create-a-GET-method-to-accept-requests"><a href="#Create-a-GET-method-to-accept-requests" class="headerlink" title="Create a GET method to accept requests"></a>Create a GET method to accept requests</h3><p>Create a method named home to accept the request on ‘/‘ url and show the index.html</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="hljs-meta">@GetMapping</span>(<span class="hljs-string">"/sayHello"</span>)</span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> Map&lt;String,String&gt; <span class="hljs-title">sayHello</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line">	Map map = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">	map.put(<span class="hljs-string">"response"</span>,<span class="hljs-string">"Hello, how are you"</span>);</span><br><span class="line">	<span class="hljs-keyword">return</span> map;</span><br></pre></td></tr></table></figure>
+<h3 id="Create-a-POST-method-to-accept-requests"><a href="#Create-a-POST-method-to-accept-requests" class="headerlink" title="Create a POST method to accept requests"></a>Create a POST method to accept requests</h3><p>Create a method named home to accept the request on ‘/‘ url and show the index.html</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">@PostMapping</span>(<span class="hljs-string">"/sayHelloWithName"</span>)</span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> Map&lt;String,String&gt; <span class="hljs-title">sayHelloWithName</span><span class="hljs-params">(Map&lt;String,String&gt; request)</span> 	</span>&#123;</span><br><span class="line">	Map map = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">	map.put(<span class="hljs-string">"response"</span>,<span class="hljs-string">"Hello, how are you "</span> + request.get(<span class="hljs-string">"name"</span>));</span><br><span class="line">	<span class="hljs-keyword">return</span> map;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Configuration-using-properties-file"><a href="#Configuration-using-properties-file" class="headerlink" title="Configuration using properties file"></a>Configuration using properties file</h3><p>Create a file <strong>application.properties</strong>  inside <strong>resources</strong> folder of application and following properties.</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">server.port=8081</span><br><span class="line">logging.level.org.springframework.web=DEBUG</span><br></pre></td></tr></table></figure>
+<p><strong>server.port</strong> : to change the default port 8080 to any other port number.</p>
+<p><strong>logging.level.org.springframework.web</strong> : to change the log level default INFO to DEBUG</p>
+<h2 id="Run-the-REST-API"><a href="#Run-the-REST-API" class="headerlink" title="Run the REST API"></a>Run the REST API</h2><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mvn spring-boot:run</span><br></pre></td></tr></table></figure>
+<h2 id="Test"><a href="#Test" class="headerlink" title="Test"></a>Test</h2><p>Goto <a href="http://localhost:8081/" target="_blank" rel="noopener">http://localhost:8081/</a></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-04-07T06:20:00.000Z">2019-04-07</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Java/">Java</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Java/Spring/">Spring</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Java/Spring/Boot/">Boot</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Java/Spring/Boot/Web/">Web</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    3 minutes read (About 451 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/Create-a-Web-Application-with-Spring-5/">Create a Web Application with Spring 5</a>
+            
+        </h1>
+        
+    <hr>
+    <div class="level-left author">
+        <img src="/images/author/vaibhav_bhootna.jpg" style="border-radius: 50%; border: 1px solid gray" width="50">
+            <span class="level-item has-text-grey" style="padding: 10px;  display: inline-flex;                vertical-align: top;">
+                <a style="color: #808080" href="#">Vaibhav Bhootna
+                    <br>
+                    
+                        Software Engineer
+                                        
+                </a>
+            </span>
+        </div>
+        <hr>
+        <div class="content">
+            <h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p>The tutorial illustrates how to Create a Web Application with Spring. We’ll look into the <strong>Spring Boot</strong> solution for creating the application. </p>
+<p>We’ll primarily use <strong>Java configuration</strong> in this tutorial.</p>
+<h2 id="Pre-requisties"><a href="#Pre-requisties" class="headerlink" title="Pre-requisties"></a>Pre-requisties</h2><ul>
+<li>JDK 1.8</li>
+<li>Maven</li>
+<li>IDE (for ease of use)</li>
+</ul>
+<h2 id="Creating-Web-app-using-Spring-Boot"><a href="#Creating-Web-app-using-Spring-Boot" class="headerlink" title="Creating Web app using Spring Boot"></a>Creating Web app using Spring Boot</h2><p>First, we’ll add the required dependencies and plugins in pom.xml</p>
+<p>We will use the dependencyManagement to define a standard version of an artifact to use across multiple projects. </p>
+<p>We will import version of artifacts defined in <strong>spring-boot-starter-parent</strong>. </p>
+<figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">dependencyManagement</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">dependencies</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line">            <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span></span><br><span class="line">            <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-starter-parent<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>2.1.3.RELEASE<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span></span><br><span class="line">            <span class="hljs-tag">&lt;<span class="hljs-name">type</span>&gt;</span>pom<span class="hljs-tag">&lt;/<span class="hljs-name">type</span>&gt;</span></span><br><span class="line">            <span class="hljs-tag">&lt;<span class="hljs-name">scope</span>&gt;</span>import<span class="hljs-tag">&lt;/<span class="hljs-name">scope</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;/<span class="hljs-name">dependencies</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">dependencyManagement</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>Now we’ll add the spring-boot-starter-web dependency.</p>
+<p>Spring Boot Starter Web includes:</p>
+<ul>
+<li>spring-web module</li>
+<li>spring-webmvc module</li>
+<li>tomcat starter </li>
+</ul>
+<p><strong>Spring-web &amp; Spring-webmvc</strong> are required for spring appplication while tomcat starter is required to run web application directly without explicitly installing any server.</p>
+<figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">dependencies</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-starter-web<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">dependencies</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>Spring Boot Maven Plugin</strong> provides Spring Boot support in Maven, letting you package executable jar or war archives and run an application “in-place”. </p>
+<figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">build</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">plugins</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">plugin</span>&gt;</span></span><br><span class="line">            <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span></span><br><span class="line">            <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-maven-plugin<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;/<span class="hljs-name">plugin</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;/<span class="hljs-name">plugins</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">build</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="Creating-a-Spring-Boot-Application"><a href="#Creating-a-Spring-Boot-Application" class="headerlink" title="Creating a Spring Boot Application"></a>Creating a Spring Boot Application</h3><p>Create a class with main method. Annotate the class with @SpringBootApplication. Call the run method of <strong>SpringApplication class</strong> </p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">package</span> com.tutorialflix.spring.web;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">import</span> org.springframework.boot.SpringApplication;</span><br><span class="line"><span class="hljs-keyword">import</span> org.springframework.boot.autoconfigure.SpringBootApplication;</span><br><span class="line"></span><br><span class="line"><span class="hljs-meta">@SpringBootApplication</span></span><br><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SpringBootWebApplication</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line">		SpringApplication.run(SpringBootWebApplication.class, args);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>@SpringBootApplication</strong> includes the functionality of following annotations:</p>
+<ul>
+<li>@Configuration </li>
+<li>@EnableAutoConfiguration</li>
+<li>@ComponentScan.</li>
+</ul>
+<p><strong> By default, it will perform the component scan in base package. So make sure <u>SpringBootWebApplication</u> class is present in the base package.</strong></p>
+<h3 id="Creating-a-Web-Controller"><a href="#Creating-a-Web-Controller" class="headerlink" title="Creating a Web Controller"></a>Creating a Web Controller</h3><p>Create a class with a meaningful name based on your requirement &amp; annotate the class with <strong>@Controller</strong>. </p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">package</span> com.tutorialflix.spring.web.contrroller;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">import</span> org.springframework.stereotype.Controller;</span><br><span class="line"></span><br><span class="line"><span class="hljs-meta">@Controller</span></span><br><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyWebController</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Create-a-method-to-accept-requests"><a href="#Create-a-method-to-accept-requests" class="headerlink" title="Create a method to accept requests"></a>Create a method to accept requests</h3><p>Create a method named home to accept the request on ‘/‘ url and show the index.html</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">package</span> com.tutorialflix.spring.web.contrroller;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">import</span> org.springframework.stereotype.Controller;</span><br><span class="line"></span><br><span class="line"><span class="hljs-meta">@Controller</span></span><br><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyWebController</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="hljs-meta">@GetMapping</span>(<span class="hljs-string">"/"</span>)</span><br><span class="line">	<span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">home</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line">		<span class="hljs-keyword">return</span> <span class="hljs-string">"index.html"</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Create-a-webpage-to-display"><a href="#Create-a-webpage-to-display" class="headerlink" title="Create a webpage to display"></a>Create a webpage to display</h3><p>Create a <strong>public</strong> folder inside <strong>resources</strong> folder of application and create a file named <strong>index.html</strong>.</p>
+<figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Welcome to TutorialFlix.<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="Configure-application-using-properties-file"><a href="#Configure-application-using-properties-file" class="headerlink" title="Configure application using properties file"></a>Configure application using properties file</h3><p>Create a file <strong>application.properties</strong>  inside <strong>resources</strong> folder of application and following properties.</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">server.port=8081</span><br><span class="line">logging.level.org.springframework.web=DEBUG</span><br></pre></td></tr></table></figure>
+<p><strong>server.port</strong> : to change the default port 8080 to any other port number.</p>
+<p><strong>logging.level.org.springframework.web</strong> : to change the log level default INFO to DEBUG</p>
+<h2 id="Run-the-web-application"><a href="#Run-the-web-application" class="headerlink" title="Run the web application"></a>Run the web application</h2><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mvn spring-boot:run</span><br></pre></td></tr></table></figure>
+<h2 id="Test"><a href="#Test" class="headerlink" title="Test"></a>Test</h2><p>Goto <a href="http://localhost:8081/" target="_blank" rel="noopener">http://localhost:8081/</a></p>
 
         </div>
         
@@ -258,7 +394,7 @@
 
 
 
-<div class="column is-3-tablet is-3-desktop is-3-widescreen  has-order-1 column-left is-sticky">
+<div class="column is-1-tablet is-1-desktop is-2-widescreen  has-order-1 column-left is-sticky">
     
         
 <div class="card widget">
@@ -274,7 +410,7 @@
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-10-27T11:27:00.000Z">2020-10-27</time></div>
                     <a href="/Migrate-Spring-Boot-Service-from-JDK-1-8-to-JDK-11-or-higher/" class="has-link-black-ter is-size-6">Migrate Spring Boot Service from JDK 1.8 to JDK 11 or higher</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Spring/">Spring</a> / <a class="has-link-grey -link" href="/categories/Spring/Java/">Java</a>
+                        <a class="has-link-grey -link" href="/categories/Java/">Java</a> / <a class="has-link-grey -link" href="/categories/Java/Spring/">Spring</a>
                     </p>
                 </div>
             </div>
@@ -287,7 +423,7 @@
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-10-26T04:33:18.000Z">2020-10-26</time></div>
                     <a href="/How-to-install-JDK-11-on-mac-using-Homebrew/" class="has-link-black-ter is-size-6">How to install JDK 11 on mac using Homebrew</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/devops/">devops</a> / <a class="has-link-grey -link" href="/categories/devops/How-to/">How to</a>
+                        <a class="has-link-grey -link" href="/categories/Installation/">Installation</a> / <a class="has-link-grey -link" href="/categories/Installation/JDK/">JDK</a>
                     </p>
                 </div>
             </div>
@@ -300,7 +436,7 @@
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-08-29T06:00:00.000Z">2020-08-29</time></div>
                     <a href="/How-to-remove-files-from-Git-commit/" class="has-link-black-ter is-size-6">How to remove files from Git commit</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/VCS/">VCS</a> / <a class="has-link-grey -link" href="/categories/VCS/How-to/">How to</a>
+                        <a class="has-link-grey -link" href="/categories/VCS/">VCS</a> / <a class="has-link-grey -link" href="/categories/VCS/GIT/">GIT</a>
                     </p>
                 </div>
             </div>
@@ -313,7 +449,7 @@
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-09T16:11:00.000Z">2019-05-10</time></div>
                     <a href="/How-to-configure-passwordless-ssh-and-scp/" class="has-link-black-ter is-size-6">How to configure passwordless ssh and scp</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/unix/">unix</a>
+                        <a class="has-link-grey -link" href="/categories/Unix/">Unix</a>
                     </p>
                 </div>
             </div>
@@ -326,7 +462,7 @@
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-05T12:57:53.000Z">2019-05-05</time></div>
                     <a href="/How-to-implement-security-in-SOAP-webservice-using-Spring-WS/" class="has-link-black-ter is-size-6">How to implement security in SOAP webservice using Spring-WS</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/Java/">Java</a> / <a class="has-link-grey -link" href="/categories/Java/Spring/">Spring</a>
                     </p>
                 </div>
             </div>
@@ -338,132 +474,41 @@
     
         
     
-        
-<div class="card widget">
-    <div class="card-content">
-        <div class="menu">
-            <h3 class="menu-label">
-                Categories
-            </h3>
-            <ul class="menu-list">
-            <li>
-        <a class="level is-marginless" href="/categories/How-to/">
-            <span class="level-start">
-                <span class="level-item">How to</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">2</span>
-            </span>
-        </a><ul><li>
-        <a class="level is-marginless" href="/categories/How-to/Java/">
-            <span class="level-start">
-                <span class="level-item">Java</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">2</span>
-            </span>
-        </a></li></ul></li><li>
-        <a class="level is-marginless" href="/categories/Spring/">
-            <span class="level-start">
-                <span class="level-item">Spring</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">2</span>
-            </span>
-        </a><ul><li>
-        <a class="level is-marginless" href="/categories/Spring/Java/">
-            <span class="level-start">
-                <span class="level-item">Java</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">1</span>
-            </span>
-        </a></li></ul></li><li>
-        <a class="level is-marginless" href="/categories/VCS/">
-            <span class="level-start">
-                <span class="level-item">VCS</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">1</span>
-            </span>
-        </a><ul><li>
-        <a class="level is-marginless" href="/categories/VCS/How-to/">
-            <span class="level-start">
-                <span class="level-item">How to</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">1</span>
-            </span>
-        </a></li></ul></li><li>
-        <a class="level is-marginless" href="/categories/Webservices/">
-            <span class="level-start">
-                <span class="level-item">Webservices</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">5</span>
-            </span>
-        </a><ul><li>
-        <a class="level is-marginless" href="/categories/Webservices/CXF/">
-            <span class="level-start">
-                <span class="level-item">CXF</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">1</span>
-            </span>
-        </a></li><li>
-        <a class="level is-marginless" href="/categories/Webservices/Soap/">
-            <span class="level-start">
-                <span class="level-item">Soap</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">2</span>
-            </span>
-        </a></li><li>
-        <a class="level is-marginless" href="/categories/Webservices/Spring/">
-            <span class="level-start">
-                <span class="level-item">Spring</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">2</span>
-            </span>
-        </a></li></ul></li><li>
-        <a class="level is-marginless" href="/categories/devops/">
-            <span class="level-start">
-                <span class="level-item">devops</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">1</span>
-            </span>
-        </a><ul><li>
-        <a class="level is-marginless" href="/categories/devops/How-to/">
-            <span class="level-start">
-                <span class="level-item">How to</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">1</span>
-            </span>
-        </a></li></ul></li><li>
-        <a class="level is-marginless" href="/categories/unix/">
-            <span class="level-start">
-                <span class="level-item">unix</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">1</span>
-            </span>
-        </a></li>
-            </ul>
-        </div>
-    </div>
-</div>
-    
     
         <div class="column-right-shadow is-hidden-widescreen is-sticky">
+        
+            <div class="card widget" style="background: none;">
+  <script type="text/javascript" language="javascript">
+    var aax_size='300x600';
+    var aax_pubname = 'tutorialflix-21';
+    var aax_src='302';
+  </script>
+  <script type="text/javascript" language="javascript" src="http://c.amazon-adsystem.com/aax2/assoc.js"></script>
+</div>
         
         </div>
     
 </div>
 
                 
+
+
+
+
+<div class="column is-1-tablet is-1-desktop is-2-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right is-sticky">
+    
+        <div class="card widget" style="background: none;">
+  <script type="text/javascript" language="javascript">
+    var aax_size='300x600';
+    var aax_pubname = 'tutorialflix-21';
+    var aax_src='302';
+  </script>
+  <script type="text/javascript" language="javascript" src="http://c.amazon-adsystem.com/aax2/assoc.js"></script>
+</div>
+    
+    
+</div>
+
             </div>
         </div>
     </section>

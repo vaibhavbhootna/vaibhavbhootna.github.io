@@ -6,7 +6,7 @@
   <link href="http://www.tutorialflix.com/atom.xml" rel="self"/>
   
   <link href="http://www.tutorialflix.com/"/>
-  <updated>2020-10-28T07:22:48.071Z</updated>
+  <updated>2020-10-31T06:27:22.422Z</updated>
   <id>http://www.tutorialflix.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://www.tutorialflix.com/Migrate-Spring-Boot-Service-from-JDK-1-8-to-JDK-11-or-higher/"/>
     <id>http://www.tutorialflix.com/Migrate-Spring-Boot-Service-from-JDK-1-8-to-JDK-11-or-higher/</id>
     <published>2020-10-27T11:27:00.000Z</published>
-    <updated>2020-10-28T07:22:48.071Z</updated>
+    <updated>2020-10-31T06:27:22.422Z</updated>
     
     
       
@@ -34,26 +34,24 @@
     
     
     
-    <category term="Spring" scheme="http://www.tutorialflix.com/categories/Spring/"/>
+    <category term="Java" scheme="http://www.tutorialflix.com/categories/Java/"/>
     
-    <category term="Java" scheme="http://www.tutorialflix.com/categories/Spring/Java/"/>
+    <category term="Spring" scheme="http://www.tutorialflix.com/categories/Java/Spring/"/>
     
-    <category term="How to" scheme="http://www.tutorialflix.com/categories/Spring/Java/How-to/"/>
+    <category term="Boot" scheme="http://www.tutorialflix.com/categories/Java/Spring/Boot/"/>
     
-    <category term="Soap" scheme="http://www.tutorialflix.com/categories/Spring/Java/How-to/Soap/"/>
-    
-    
-    <category term="Spring" scheme="http://www.tutorialflix.com/tags/Spring/"/>
     
     <category term="Java" scheme="http://www.tutorialflix.com/tags/Java/"/>
     
-    <category term="SpringBoot" scheme="http://www.tutorialflix.com/tags/SpringBoot/"/>
+    <category term="Spring" scheme="http://www.tutorialflix.com/tags/Spring/"/>
     
-    <category term="JDK11" scheme="http://www.tutorialflix.com/tags/JDK11/"/>
+    <category term="Boot" scheme="http://www.tutorialflix.com/tags/Boot/"/>
     
     <category term="Migration" scheme="http://www.tutorialflix.com/tags/Migration/"/>
     
-    <category term="JDK" scheme="http://www.tutorialflix.com/tags/JDK/"/>
+    <category term="JDK11" scheme="http://www.tutorialflix.com/tags/JDK11/"/>
+    
+    <category term="JDK8" scheme="http://www.tutorialflix.com/tags/JDK8/"/>
     
   </entry>
   
@@ -62,7 +60,7 @@
     <link href="http://www.tutorialflix.com/How-to-install-JDK-11-on-mac-using-Homebrew/"/>
     <id>http://www.tutorialflix.com/How-to-install-JDK-11-on-mac-using-Homebrew/</id>
     <published>2020-10-26T04:33:18.000Z</published>
-    <updated>2020-10-27T12:03:56.401Z</updated>
+    <updated>2020-10-31T06:24:25.955Z</updated>
     
     
       
@@ -76,9 +74,9 @@
     
     
     
-    <category term="devops" scheme="http://www.tutorialflix.com/categories/devops/"/>
+    <category term="Installation" scheme="http://www.tutorialflix.com/categories/Installation/"/>
     
-    <category term="How to" scheme="http://www.tutorialflix.com/categories/devops/How-to/"/>
+    <category term="JDK" scheme="http://www.tutorialflix.com/categories/Installation/JDK/"/>
     
     
     <category term="installation" scheme="http://www.tutorialflix.com/tags/installation/"/>
@@ -102,7 +100,7 @@
     <link href="http://www.tutorialflix.com/How-to-remove-files-from-Git-commit/"/>
     <id>http://www.tutorialflix.com/How-to-remove-files-from-Git-commit/</id>
     <published>2020-08-29T06:00:00.000Z</published>
-    <updated>2020-08-29T06:24:02.051Z</updated>
+    <updated>2020-10-31T06:27:12.373Z</updated>
     
     
       
@@ -118,7 +116,7 @@
     
     <category term="VCS" scheme="http://www.tutorialflix.com/categories/VCS/"/>
     
-    <category term="How to" scheme="http://www.tutorialflix.com/categories/VCS/How-to/"/>
+    <category term="GIT" scheme="http://www.tutorialflix.com/categories/VCS/GIT/"/>
     
     
     <category term="GIT" scheme="http://www.tutorialflix.com/tags/GIT/"/>
@@ -130,7 +128,7 @@
     <link href="http://www.tutorialflix.com/How-to-configure-passwordless-ssh-and-scp/"/>
     <id>http://www.tutorialflix.com/How-to-configure-passwordless-ssh-and-scp/</id>
     <published>2019-05-09T16:11:00.000Z</published>
-    <updated>2020-08-29T05:42:19.280Z</updated>
+    <updated>2020-10-31T06:20:39.039Z</updated>
     
     
       
@@ -143,7 +141,7 @@
     
     
     
-    <category term="unix" scheme="http://www.tutorialflix.com/categories/unix/"/>
+    <category term="Unix" scheme="http://www.tutorialflix.com/categories/Unix/"/>
     
     
     <category term="unix" scheme="http://www.tutorialflix.com/tags/unix/"/>
@@ -155,7 +153,7 @@
     <link href="http://www.tutorialflix.com/How-to-implement-security-in-SOAP-webservice-using-Spring-WS/"/>
     <id>http://www.tutorialflix.com/How-to-implement-security-in-SOAP-webservice-using-Spring-WS/</id>
     <published>2019-05-05T12:57:53.000Z</published>
-    <updated>2020-08-29T05:42:00.493Z</updated>
+    <updated>2020-10-31T06:40:49.674Z</updated>
     
     
       
@@ -168,6 +166,26 @@
     
     
     
+    <category term="Java" scheme="http://www.tutorialflix.com/categories/Java/"/>
+    
+    <category term="Spring" scheme="http://www.tutorialflix.com/categories/Java/Spring/"/>
+    
+    <category term="Boot" scheme="http://www.tutorialflix.com/categories/Java/Spring/Boot/"/>
+    
+    <category term="Soap" scheme="http://www.tutorialflix.com/categories/Java/Spring/Boot/Soap/"/>
+    
+    <category term="Security" scheme="http://www.tutorialflix.com/categories/Java/Spring/Boot/Soap/Security/"/>
+    
+    
+    <category term="Java" scheme="http://www.tutorialflix.com/tags/Java/"/>
+    
+    <category term="Spring" scheme="http://www.tutorialflix.com/tags/Spring/"/>
+    
+    <category term="SOAP" scheme="http://www.tutorialflix.com/tags/SOAP/"/>
+    
+    <category term="Boot" scheme="http://www.tutorialflix.com/tags/Boot/"/>
+    
+    <category term="Security" scheme="http://www.tutorialflix.com/tags/Security/"/>
     
   </entry>
   
@@ -176,7 +194,7 @@
     <link href="http://www.tutorialflix.com/How-to-create-soap-webservice-using-spring-boot/"/>
     <id>http://www.tutorialflix.com/How-to-create-soap-webservice-using-spring-boot/</id>
     <published>2019-05-03T15:58:00.000Z</published>
-    <updated>2020-08-29T05:42:04.764Z</updated>
+    <updated>2020-10-31T06:26:53.008Z</updated>
     
     
       
@@ -189,16 +207,22 @@
     
     
     
-    <category term="Webservices" scheme="http://www.tutorialflix.com/categories/Webservices/"/>
+    <category term="Java" scheme="http://www.tutorialflix.com/categories/Java/"/>
     
-    <category term="Spring" scheme="http://www.tutorialflix.com/categories/Webservices/Spring/"/>
+    <category term="Spring" scheme="http://www.tutorialflix.com/categories/Java/Spring/"/>
     
-    <category term="soap" scheme="http://www.tutorialflix.com/categories/Webservices/Spring/soap/"/>
+    <category term="Boot" scheme="http://www.tutorialflix.com/categories/Java/Spring/Boot/"/>
     
+    <category term="Soap" scheme="http://www.tutorialflix.com/categories/Java/Spring/Boot/Soap/"/>
+    
+    
+    <category term="Java" scheme="http://www.tutorialflix.com/tags/Java/"/>
     
     <category term="Spring" scheme="http://www.tutorialflix.com/tags/Spring/"/>
     
-    <category term="Webservices" scheme="http://www.tutorialflix.com/tags/Webservices/"/>
+    <category term="Boot" scheme="http://www.tutorialflix.com/tags/Boot/"/>
+    
+    <category term="Soap" scheme="http://www.tutorialflix.com/tags/Soap/"/>
     
   </entry>
   
@@ -207,7 +231,7 @@
     <link href="http://www.tutorialflix.com/How-to-create-a-maven-project/"/>
     <id>http://www.tutorialflix.com/How-to-create-a-maven-project/</id>
     <published>2019-05-01T02:10:00.000Z</published>
-    <updated>2020-08-29T05:42:14.435Z</updated>
+    <updated>2020-10-31T06:20:25.746Z</updated>
     
     
       
@@ -221,12 +245,14 @@
     
     
     
-    <category term="How to" scheme="http://www.tutorialflix.com/categories/How-to/"/>
+    <category term="Java" scheme="http://www.tutorialflix.com/categories/Java/"/>
     
-    <category term="Java" scheme="http://www.tutorialflix.com/categories/How-to/Java/"/>
+    <category term="Maven" scheme="http://www.tutorialflix.com/categories/Java/Maven/"/>
     
     
-    <category term="Apache Maven" scheme="http://www.tutorialflix.com/tags/Apache-Maven/"/>
+    <category term="Java" scheme="http://www.tutorialflix.com/tags/Java/"/>
+    
+    <category term="Maven" scheme="http://www.tutorialflix.com/tags/Maven/"/>
     
   </entry>
   
@@ -235,7 +261,7 @@
     <link href="http://www.tutorialflix.com/Developing-REST-Service-using-Spring-Boot/"/>
     <id>http://www.tutorialflix.com/Developing-REST-Service-using-Spring-Boot/</id>
     <published>2019-04-28T01:10:00.000Z</published>
-    <updated>2020-10-28T07:22:02.266Z</updated>
+    <updated>2020-10-31T06:26:16.338Z</updated>
     
     
       
@@ -248,20 +274,22 @@
     
     
     
-    <category term="Webservices" scheme="http://www.tutorialflix.com/categories/Webservices/"/>
+    <category term="Java" scheme="http://www.tutorialflix.com/categories/Java/"/>
     
-    <category term="Spring" scheme="http://www.tutorialflix.com/categories/Webservices/Spring/"/>
+    <category term="Spring" scheme="http://www.tutorialflix.com/categories/Java/Spring/"/>
     
-    <category term="REST" scheme="http://www.tutorialflix.com/categories/Webservices/Spring/REST/"/>
+    <category term="Boot" scheme="http://www.tutorialflix.com/categories/Java/Spring/Boot/"/>
     
+    <category term="Rest" scheme="http://www.tutorialflix.com/categories/Java/Spring/Boot/Rest/"/>
+    
+    
+    <category term="Java" scheme="http://www.tutorialflix.com/tags/Java/"/>
     
     <category term="Spring" scheme="http://www.tutorialflix.com/tags/Spring/"/>
     
+    <category term="SpringBoot" scheme="http://www.tutorialflix.com/tags/SpringBoot/"/>
+    
     <category term="Rest" scheme="http://www.tutorialflix.com/tags/Rest/"/>
-    
-    <category term="Spring Boot" scheme="http://www.tutorialflix.com/tags/Spring-Boot/"/>
-    
-    <category term="Webservices" scheme="http://www.tutorialflix.com/tags/Webservices/"/>
     
   </entry>
   
@@ -270,7 +298,7 @@
     <link href="http://www.tutorialflix.com/Developing-SOAP-Web-service-using-Apache-CXF-and-Apache-Camel/"/>
     <id>http://www.tutorialflix.com/Developing-SOAP-Web-service-using-Apache-CXF-and-Apache-Camel/</id>
     <published>2019-04-24T09:09:00.000Z</published>
-    <updated>2020-08-29T05:42:23.826Z</updated>
+    <updated>2020-10-31T06:21:07.793Z</updated>
     
     
       
@@ -283,16 +311,16 @@
     
     
     
-    <category term="Webservices" scheme="http://www.tutorialflix.com/categories/Webservices/"/>
+    <category term="Java" scheme="http://www.tutorialflix.com/categories/Java/"/>
     
-    <category term="CXF" scheme="http://www.tutorialflix.com/categories/Webservices/CXF/"/>
+    <category term="Spring" scheme="http://www.tutorialflix.com/categories/Java/Spring/"/>
     
-    <category term="SOAP" scheme="http://www.tutorialflix.com/categories/Webservices/CXF/SOAP/"/>
+    <category term="Camel" scheme="http://www.tutorialflix.com/categories/Java/Spring/Camel/"/>
     
-    
-    <category term="Spring" scheme="http://www.tutorialflix.com/tags/Spring/"/>
     
     <category term="Java" scheme="http://www.tutorialflix.com/tags/Java/"/>
+    
+    <category term="Spring" scheme="http://www.tutorialflix.com/tags/Spring/"/>
     
     <category term="SOAP" scheme="http://www.tutorialflix.com/tags/SOAP/"/>
     
@@ -307,7 +335,7 @@
     <link href="http://www.tutorialflix.com/How-to-load-property-file-in-java/"/>
     <id>http://www.tutorialflix.com/How-to-load-property-file-in-java/</id>
     <published>2019-04-23T22:44:00.000Z</published>
-    <updated>2020-08-29T05:41:51.862Z</updated>
+    <updated>2020-10-31T06:17:31.096Z</updated>
     
     
       
@@ -320,9 +348,9 @@
     
     
     
-    <category term="How to" scheme="http://www.tutorialflix.com/categories/How-to/"/>
+    <category term="Java" scheme="http://www.tutorialflix.com/categories/Java/"/>
     
-    <category term="Java" scheme="http://www.tutorialflix.com/categories/How-to/Java/"/>
+    <category term="Core" scheme="http://www.tutorialflix.com/categories/Java/Core/"/>
     
     
     <category term="Java" scheme="http://www.tutorialflix.com/tags/Java/"/>
@@ -334,7 +362,7 @@
     <link href="http://www.tutorialflix.com/How-to-create-a-WSDL-file/"/>
     <id>http://www.tutorialflix.com/How-to-create-a-WSDL-file/</id>
     <published>2019-04-14T18:03:00.000Z</published>
-    <updated>2020-08-29T05:42:09.247Z</updated>
+    <updated>2020-10-31T06:19:37.962Z</updated>
     
     
       
@@ -352,9 +380,9 @@
     <category term="Soap" scheme="http://www.tutorialflix.com/categories/Webservices/Soap/"/>
     
     
-    <category term="Webservices" scheme="http://www.tutorialflix.com/tags/Webservices/"/>
-    
     <category term="SOAP" scheme="http://www.tutorialflix.com/tags/SOAP/"/>
+    
+    <category term="Webservices" scheme="http://www.tutorialflix.com/tags/Webservices/"/>
     
     <category term="Middleware" scheme="http://www.tutorialflix.com/tags/Middleware/"/>
     
@@ -367,7 +395,7 @@
     <link href="http://www.tutorialflix.com/SOAP/"/>
     <id>http://www.tutorialflix.com/SOAP/</id>
     <published>2019-04-13T23:42:00.000Z</published>
-    <updated>2019-05-03T18:04:14.781Z</updated>
+    <updated>2020-10-31T06:40:05.925Z</updated>
     
     
       
@@ -385,9 +413,9 @@
     <category term="Soap" scheme="http://www.tutorialflix.com/categories/Webservices/Soap/"/>
     
     
-    <category term="Webservices" scheme="http://www.tutorialflix.com/tags/Webservices/"/>
-    
     <category term="SOAP" scheme="http://www.tutorialflix.com/tags/SOAP/"/>
+    
+    <category term="Webservices" scheme="http://www.tutorialflix.com/tags/Webservices/"/>
     
     <category term="Middleware" scheme="http://www.tutorialflix.com/tags/Middleware/"/>
     
@@ -398,7 +426,7 @@
     <link href="http://www.tutorialflix.com/Create-a-Web-Application-with-Spring-5/"/>
     <id>http://www.tutorialflix.com/Create-a-Web-Application-with-Spring-5/</id>
     <published>2019-04-07T06:20:00.000Z</published>
-    <updated>2020-08-29T05:42:31.656Z</updated>
+    <updated>2020-10-31T06:25:47.443Z</updated>
     
     
       
@@ -411,12 +439,22 @@
     
     
     
-    <category term="Spring" scheme="http://www.tutorialflix.com/categories/Spring/"/>
+    <category term="Java" scheme="http://www.tutorialflix.com/categories/Java/"/>
     
+    <category term="Spring" scheme="http://www.tutorialflix.com/categories/Java/Spring/"/>
+    
+    <category term="Boot" scheme="http://www.tutorialflix.com/categories/Java/Spring/Boot/"/>
+    
+    <category term="Web" scheme="http://www.tutorialflix.com/categories/Java/Spring/Boot/Web/"/>
+    
+    
+    <category term="Java" scheme="http://www.tutorialflix.com/tags/Java/"/>
     
     <category term="Spring" scheme="http://www.tutorialflix.com/tags/Spring/"/>
     
-    <category term="Java" scheme="http://www.tutorialflix.com/tags/Java/"/>
+    <category term="SpringBoot" scheme="http://www.tutorialflix.com/tags/SpringBoot/"/>
+    
+    <category term="Web" scheme="http://www.tutorialflix.com/tags/Web/"/>
     
   </entry>
   

@@ -15,7 +15,7 @@
     <atom:link href="http://www.tutorialflix.com/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>Collection of technology tutorials</description>
-    <pubDate>Wed, 28 Oct 2020 07:22:48 GMT</pubDate>
+    <pubDate>Sat, 31 Oct 2020 06:27:22 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -35,26 +35,24 @@
       
       
       
-      <category domain="http://www.tutorialflix.com/categories/Spring/">Spring</category>
+      <category domain="http://www.tutorialflix.com/categories/Java/">Java</category>
       
-      <category domain="http://www.tutorialflix.com/categories/Spring/Java/">Java</category>
+      <category domain="http://www.tutorialflix.com/categories/Java/Spring/">Spring</category>
       
-      <category domain="http://www.tutorialflix.com/categories/Spring/Java/How-to/">How to</category>
+      <category domain="http://www.tutorialflix.com/categories/Java/Spring/Boot/">Boot</category>
       
-      <category domain="http://www.tutorialflix.com/categories/Spring/Java/How-to/Soap/">Soap</category>
-      
-      
-      <category domain="http://www.tutorialflix.com/tags/Spring/">Spring</category>
       
       <category domain="http://www.tutorialflix.com/tags/Java/">Java</category>
       
-      <category domain="http://www.tutorialflix.com/tags/SpringBoot/">SpringBoot</category>
+      <category domain="http://www.tutorialflix.com/tags/Spring/">Spring</category>
       
-      <category domain="http://www.tutorialflix.com/tags/JDK11/">JDK11</category>
+      <category domain="http://www.tutorialflix.com/tags/Boot/">Boot</category>
       
       <category domain="http://www.tutorialflix.com/tags/Migration/">Migration</category>
       
-      <category domain="http://www.tutorialflix.com/tags/JDK/">JDK</category>
+      <category domain="http://www.tutorialflix.com/tags/JDK11/">JDK11</category>
+      
+      <category domain="http://www.tutorialflix.com/tags/JDK8/">JDK8</category>
       
       
       <comments>http://www.tutorialflix.com/Migrate-Spring-Boot-Service-from-JDK-1-8-to-JDK-11-or-higher/#disqus_thread</comments>
@@ -79,9 +77,9 @@
       
       
       
-      <category domain="http://www.tutorialflix.com/categories/devops/">devops</category>
+      <category domain="http://www.tutorialflix.com/categories/Installation/">Installation</category>
       
-      <category domain="http://www.tutorialflix.com/categories/devops/How-to/">How to</category>
+      <category domain="http://www.tutorialflix.com/categories/Installation/JDK/">JDK</category>
       
       
       <category domain="http://www.tutorialflix.com/tags/installation/">installation</category>
@@ -123,7 +121,7 @@
       
       <category domain="http://www.tutorialflix.com/categories/VCS/">VCS</category>
       
-      <category domain="http://www.tutorialflix.com/categories/VCS/How-to/">How to</category>
+      <category domain="http://www.tutorialflix.com/categories/VCS/GIT/">GIT</category>
       
       
       <category domain="http://www.tutorialflix.com/tags/GIT/">GIT</category>
@@ -150,7 +148,7 @@
       
       
       
-      <category domain="http://www.tutorialflix.com/categories/unix/">unix</category>
+      <category domain="http://www.tutorialflix.com/categories/Unix/">Unix</category>
       
       
       <category domain="http://www.tutorialflix.com/tags/unix/">unix</category>
@@ -177,6 +175,26 @@
       
       
       
+      <category domain="http://www.tutorialflix.com/categories/Java/">Java</category>
+      
+      <category domain="http://www.tutorialflix.com/categories/Java/Spring/">Spring</category>
+      
+      <category domain="http://www.tutorialflix.com/categories/Java/Spring/Boot/">Boot</category>
+      
+      <category domain="http://www.tutorialflix.com/categories/Java/Spring/Boot/Soap/">Soap</category>
+      
+      <category domain="http://www.tutorialflix.com/categories/Java/Spring/Boot/Soap/Security/">Security</category>
+      
+      
+      <category domain="http://www.tutorialflix.com/tags/Java/">Java</category>
+      
+      <category domain="http://www.tutorialflix.com/tags/Spring/">Spring</category>
+      
+      <category domain="http://www.tutorialflix.com/tags/SOAP/">SOAP</category>
+      
+      <category domain="http://www.tutorialflix.com/tags/Boot/">Boot</category>
+      
+      <category domain="http://www.tutorialflix.com/tags/Security/">Security</category>
       
       
       <comments>http://www.tutorialflix.com/How-to-implement-security-in-SOAP-webservice-using-Spring-WS/#disqus_thread</comments>
@@ -200,16 +218,22 @@
       
       
       
-      <category domain="http://www.tutorialflix.com/categories/Webservices/">Webservices</category>
+      <category domain="http://www.tutorialflix.com/categories/Java/">Java</category>
       
-      <category domain="http://www.tutorialflix.com/categories/Webservices/Spring/">Spring</category>
+      <category domain="http://www.tutorialflix.com/categories/Java/Spring/">Spring</category>
       
-      <category domain="http://www.tutorialflix.com/categories/Webservices/Spring/soap/">soap</category>
+      <category domain="http://www.tutorialflix.com/categories/Java/Spring/Boot/">Boot</category>
       
+      <category domain="http://www.tutorialflix.com/categories/Java/Spring/Boot/Soap/">Soap</category>
+      
+      
+      <category domain="http://www.tutorialflix.com/tags/Java/">Java</category>
       
       <category domain="http://www.tutorialflix.com/tags/Spring/">Spring</category>
       
-      <category domain="http://www.tutorialflix.com/tags/Webservices/">Webservices</category>
+      <category domain="http://www.tutorialflix.com/tags/Boot/">Boot</category>
+      
+      <category domain="http://www.tutorialflix.com/tags/Soap/">Soap</category>
       
       
       <comments>http://www.tutorialflix.com/How-to-create-soap-webservice-using-spring-boot/#disqus_thread</comments>
@@ -234,12 +258,14 @@
       
       
       
-      <category domain="http://www.tutorialflix.com/categories/How-to/">How to</category>
+      <category domain="http://www.tutorialflix.com/categories/Java/">Java</category>
       
-      <category domain="http://www.tutorialflix.com/categories/How-to/Java/">Java</category>
+      <category domain="http://www.tutorialflix.com/categories/Java/Maven/">Maven</category>
       
       
-      <category domain="http://www.tutorialflix.com/tags/Apache-Maven/">Apache Maven</category>
+      <category domain="http://www.tutorialflix.com/tags/Java/">Java</category>
+      
+      <category domain="http://www.tutorialflix.com/tags/Maven/">Maven</category>
       
       
       <comments>http://www.tutorialflix.com/How-to-create-a-maven-project/#disqus_thread</comments>
@@ -263,20 +289,22 @@
       
       
       
-      <category domain="http://www.tutorialflix.com/categories/Webservices/">Webservices</category>
+      <category domain="http://www.tutorialflix.com/categories/Java/">Java</category>
       
-      <category domain="http://www.tutorialflix.com/categories/Webservices/Spring/">Spring</category>
+      <category domain="http://www.tutorialflix.com/categories/Java/Spring/">Spring</category>
       
-      <category domain="http://www.tutorialflix.com/categories/Webservices/Spring/REST/">REST</category>
+      <category domain="http://www.tutorialflix.com/categories/Java/Spring/Boot/">Boot</category>
       
+      <category domain="http://www.tutorialflix.com/categories/Java/Spring/Boot/Rest/">Rest</category>
+      
+      
+      <category domain="http://www.tutorialflix.com/tags/Java/">Java</category>
       
       <category domain="http://www.tutorialflix.com/tags/Spring/">Spring</category>
       
+      <category domain="http://www.tutorialflix.com/tags/SpringBoot/">SpringBoot</category>
+      
       <category domain="http://www.tutorialflix.com/tags/Rest/">Rest</category>
-      
-      <category domain="http://www.tutorialflix.com/tags/Spring-Boot/">Spring Boot</category>
-      
-      <category domain="http://www.tutorialflix.com/tags/Webservices/">Webservices</category>
       
       
       <comments>http://www.tutorialflix.com/Developing-REST-Service-using-Spring-Boot/#disqus_thread</comments>
@@ -300,16 +328,16 @@
       
       
       
-      <category domain="http://www.tutorialflix.com/categories/Webservices/">Webservices</category>
+      <category domain="http://www.tutorialflix.com/categories/Java/">Java</category>
       
-      <category domain="http://www.tutorialflix.com/categories/Webservices/CXF/">CXF</category>
+      <category domain="http://www.tutorialflix.com/categories/Java/Spring/">Spring</category>
       
-      <category domain="http://www.tutorialflix.com/categories/Webservices/CXF/SOAP/">SOAP</category>
+      <category domain="http://www.tutorialflix.com/categories/Java/Spring/Camel/">Camel</category>
       
-      
-      <category domain="http://www.tutorialflix.com/tags/Spring/">Spring</category>
       
       <category domain="http://www.tutorialflix.com/tags/Java/">Java</category>
+      
+      <category domain="http://www.tutorialflix.com/tags/Spring/">Spring</category>
       
       <category domain="http://www.tutorialflix.com/tags/SOAP/">SOAP</category>
       
@@ -339,9 +367,9 @@
       
       
       
-      <category domain="http://www.tutorialflix.com/categories/How-to/">How to</category>
+      <category domain="http://www.tutorialflix.com/categories/Java/">Java</category>
       
-      <category domain="http://www.tutorialflix.com/categories/How-to/Java/">Java</category>
+      <category domain="http://www.tutorialflix.com/categories/Java/Core/">Core</category>
       
       
       <category domain="http://www.tutorialflix.com/tags/Java/">Java</category>
@@ -373,9 +401,9 @@
       <category domain="http://www.tutorialflix.com/categories/Webservices/Soap/">Soap</category>
       
       
-      <category domain="http://www.tutorialflix.com/tags/Webservices/">Webservices</category>
-      
       <category domain="http://www.tutorialflix.com/tags/SOAP/">SOAP</category>
+      
+      <category domain="http://www.tutorialflix.com/tags/Webservices/">Webservices</category>
       
       <category domain="http://www.tutorialflix.com/tags/Middleware/">Middleware</category>
       
@@ -408,9 +436,9 @@
       <category domain="http://www.tutorialflix.com/categories/Webservices/Soap/">Soap</category>
       
       
-      <category domain="http://www.tutorialflix.com/tags/Webservices/">Webservices</category>
-      
       <category domain="http://www.tutorialflix.com/tags/SOAP/">SOAP</category>
+      
+      <category domain="http://www.tutorialflix.com/tags/Webservices/">Webservices</category>
       
       <category domain="http://www.tutorialflix.com/tags/Middleware/">Middleware</category>
       
@@ -436,12 +464,22 @@
       
       
       
-      <category domain="http://www.tutorialflix.com/categories/Spring/">Spring</category>
+      <category domain="http://www.tutorialflix.com/categories/Java/">Java</category>
       
+      <category domain="http://www.tutorialflix.com/categories/Java/Spring/">Spring</category>
+      
+      <category domain="http://www.tutorialflix.com/categories/Java/Spring/Boot/">Boot</category>
+      
+      <category domain="http://www.tutorialflix.com/categories/Java/Spring/Boot/Web/">Web</category>
+      
+      
+      <category domain="http://www.tutorialflix.com/tags/Java/">Java</category>
       
       <category domain="http://www.tutorialflix.com/tags/Spring/">Spring</category>
       
-      <category domain="http://www.tutorialflix.com/tags/Java/">Java</category>
+      <category domain="http://www.tutorialflix.com/tags/SpringBoot/">SpringBoot</category>
+      
+      <category domain="http://www.tutorialflix.com/tags/Web/">Web</category>
       
       
       <comments>http://www.tutorialflix.com/Create-a-Web-Application-with-Spring-5/#disqus_thread</comments>
