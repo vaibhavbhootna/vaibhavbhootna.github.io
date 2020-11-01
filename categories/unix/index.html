@@ -218,9 +218,9 @@
 <p>By default system will generate the keys with name <code>id_rsa &amp; id_rsa.pub</code>. If you want to generate with custom name then enter the file name when it prompts. </p>
 </blockquote>
 <p><code>passphrase</code> will act as password for your key to avoid misuse, you can keep it blank also.</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa**</span><br><span class="line"></span><br><span class="line">Generating public/private rsa key pair.</span><br><span class="line">Enter file in which to save the key (/home/author/.ssh/id_rsa): </span><br><span class="line">Enter passphrase (empty for no passphrase): </span><br><span class="line">Enter same passphrase again: </span><br><span class="line">Your identification has been saved in /home/author/.ssh/id_rsa.</span><br><span class="line">Your public key has been saved in /home/ec2-user/.ssh/id_rsa.pub.</span><br><span class="line">The key fingerprint is:</span><br><span class="line">SHA256:7B2G20AHF7PFHIACElEAzEO+i293wReZI49T7MMH1ns author@tutorialflix</span><br><span class="line">The key&apos;s randomart image is:</span><br><span class="line">+---[RSA 2048]----+</span><br><span class="line">|=o==o.  ..==o.   |</span><br><span class="line">|.+ .  . .o +o    |</span><br><span class="line">| ..    o.+o      |</span><br><span class="line">|  .   .oXo.      |</span><br><span class="line">| .   . OS+o.     |</span><br><span class="line">|. .   =.**o.E    |</span><br><span class="line">|..     +ooo.     |</span><br><span class="line">| .. . .          |</span><br><span class="line">| ... .           |</span><br><span class="line">+----[SHA256]-----+</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain hljs"><table><tr><td class="code"><pre><span class="line">$ ssh-keygen -t rsa**</span><br><span class="line"></span><br><span class="line">Generating public/private rsa key pair.</span><br><span class="line">Enter file in which to save the key (/home/author/.ssh/id_rsa): </span><br><span class="line">Enter passphrase (empty for no passphrase): </span><br><span class="line">Enter same passphrase again: </span><br><span class="line">Your identification has been saved in /home/author/.ssh/id_rsa.</span><br><span class="line">Your public key has been saved in /home/ec2-user/.ssh/id_rsa.pub.</span><br><span class="line">The key fingerprint is:</span><br><span class="line">SHA256:7B2G20AHF7PFHIACElEAzEO+i293wReZI49T7MMH1ns author@tutorialflix</span><br><span class="line">The key&apos;s randomart image is:</span><br><span class="line">+---[RSA 2048]----+</span><br><span class="line">|=o==o.  ..==o.   |</span><br><span class="line">|.+ .  . .o +o    |</span><br><span class="line">| ..    o.+o      |</span><br><span class="line">|  .   .oXo.      |</span><br><span class="line">| .   . OS+o.     |</span><br><span class="line">|. .   =.**o.E    |</span><br><span class="line">|..     +ooo.     |</span><br><span class="line">| .. . .          |</span><br><span class="line">| ... .           |</span><br><span class="line">+----[SHA256]-----+</span><br></pre></td></tr></table></figure>
 <h3 id="Upload-Your-Public-Key-to-Remote-Linux-Server"><a href="#Upload-Your-Public-Key-to-Remote-Linux-Server" class="headerlink" title="Upload Your Public Key to Remote Linux Server"></a>Upload Your Public Key to Remote Linux Server</h3><p>You can upload the key using <code>ssh-copy-id</code> command, which is shipped by the <code>openssh-client</code> package.</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">ssh-copy-id remote-user@server-ip</span><br><span class="line">**enter password**</span><br><span class="line"></span><br><span class="line">/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed</span><br><span class="line">/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys</span><br><span class="line">remote-user@server-ip&apos;s password:</span><br><span class="line">Number of key(s) added: 1</span><br><span class="line">Now try logging into the machine, with: &quot;ssh &apos;remote-user@server-ip&apos;&quot;</span><br><span class="line">and check to make sure that only the key(s) you wanted were added.</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain hljs"><table><tr><td class="code"><pre><span class="line">ssh-copy-id remote-user@server-ip</span><br><span class="line">**enter password**</span><br><span class="line"></span><br><span class="line">/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed</span><br><span class="line">/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys</span><br><span class="line">remote-user@server-ip&apos;s password:</span><br><span class="line">Number of key(s) added: 1</span><br><span class="line">Now try logging into the machine, with: &quot;ssh &apos;remote-user@server-ip&apos;&quot;</span><br><span class="line">and check to make sure that only the key(s) you wanted were added.</span><br></pre></td></tr></table></figure>
 <p>The public key is stored in  <strong>.ssh/authorized_keys</strong>  file under the remote user’s home directory. Now ssh into the remote server and you will be able to login without password</p>
 
         </div>
@@ -251,6 +251,19 @@
         <h3 class="menu-label">
             Recent
         </h3>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-11-01T09:27:38.000Z">2020-11-01</time></div>
+                    <a href="/Run-Spring-Boot-Application-inside-Docker-container/" class="has-link-black-ter is-size-6">Run Spring Boot Application inside Docker container</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Docker/">Docker</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -299,19 +312,6 @@
                     <a href="/How-to-configure-passwordless-ssh-and-scp/" class="has-link-black-ter is-size-6">How to configure passwordless ssh and scp</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Unix/">Unix</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-05T12:57:53.000Z">2019-05-05</time></div>
-                    <a href="/How-to-implement-security-in-SOAP-webservice-using-Spring-WS/" class="has-link-black-ter is-size-6">How to implement security in SOAP webservice using Spring-WS</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Java/">Java</a> / <a class="has-link-grey -link" href="/categories/Java/Spring/">Spring</a>
                     </p>
                 </div>
             </div>
