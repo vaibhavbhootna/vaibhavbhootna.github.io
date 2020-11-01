@@ -1,327 +1,456 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>http://www.tutorialflix.com/Run-Spring-Boot-Application-inside-Docker-container/</loc>
+    
+    <lastmod>2020-11-01</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.tutorialflix.com/How-to-implement-security-in-SOAP-webservice-using-Spring-WS/</loc>
+    
+    <lastmod>2020-10-31</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.tutorialflix.com/SOAP/</loc>
+    
+    <lastmod>2020-10-31</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.tutorialflix.com/Migrate-Spring-Boot-Service-from-JDK-1-8-to-JDK-11-or-higher/</loc>
+    
+    <lastmod>2020-10-31</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.tutorialflix.com/How-to-remove-files-from-Git-commit/</loc>
+    
+    <lastmod>2020-10-31</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.tutorialflix.com/How-to-create-soap-webservice-using-spring-boot/</loc>
+    
+    <lastmod>2020-10-31</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.tutorialflix.com/Developing-REST-Service-using-Spring-Boot/</loc>
+    
+    <lastmod>2020-10-31</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.tutorialflix.com/Create-a-Web-Application-with-Spring-5/</loc>
+    
+    <lastmod>2020-10-31</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.tutorialflix.com/How-to-install-JDK-11-on-mac-using-Homebrew/</loc>
+    
+    <lastmod>2020-10-31</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.tutorialflix.com/Developing-SOAP-Web-service-using-Apache-CXF-and-Apache-Camel/</loc>
+    
+    <lastmod>2020-10-31</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.tutorialflix.com/How-to-configure-passwordless-ssh-and-scp/</loc>
+    
+    <lastmod>2020-10-31</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.tutorialflix.com/How-to-create-a-maven-project/</loc>
+    
+    <lastmod>2020-10-31</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.tutorialflix.com/How-to-create-a-WSDL-file/</loc>
+    
+    <lastmod>2020-10-31</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.tutorialflix.com/How-to-load-property-file-in-java/</loc>
+    
+    <lastmod>2020-10-31</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.tutorialflix.com/Contact/index.html</loc>
+    
+    <lastmod>2019-05-06</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.tutorialflix.com/Videos/index.html</loc>
+    
+    <lastmod>2019-05-01</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.tutorialflix.com/JBoss-Fuse-Tutorials-Videos/index.html</loc>
+    
+    <lastmod>2019-04-30</lastmod>
+    
+  </url>
+  
 
+  <url>
+    <loc>http://www.tutorialflix.com/</loc>
+    <lastmod>2020-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
 
-<url>
-  <loc>https://tutorialflix.com/</loc>
-  <lastmod>2020-10-31T11:49:51+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://tutorialflix.com/JBoss-Fuse-Tutorials-Videos/</loc>
-  <lastmod>2020-10-31T11:49:51+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tutorialflix.com/archives/</loc>
-  <lastmod>2020-10-31T11:49:51+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tutorialflix.com/categories/</loc>
-  <lastmod>2020-10-31T11:49:51+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tutorialflix.com/Videos/</loc>
-  <lastmod>2020-10-31T11:49:51+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tutorialflix.com/Contact/</loc>
-  <lastmod>2020-10-31T11:49:51+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tutorialflix.com/categories/Java/</loc>
-  <lastmod>2020-10-31T11:49:51+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tutorialflix.com/categories/Java/Spring/</loc>
-  <lastmod>2020-10-31T11:49:51+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tutorialflix.com/categories/Java/Spring/Boot/</loc>
-  <lastmod>2020-10-31T11:49:51+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tutorialflix.com/Migrate-Spring-Boot-Service-from-JDK-1-8-to-JDK-11-or-higher/</loc>
-  <lastmod>2020-10-31T11:49:51+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tutorialflix.com/categories/Installation/</loc>
-  <lastmod>2020-10-31T11:49:51+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tutorialflix.com/categories/Installation/JDK/</loc>
-  <lastmod>2020-10-31T11:49:51+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tutorialflix.com/How-to-install-JDK-11-on-mac-using-Homebrew/</loc>
-  <lastmod>2020-10-31T11:49:51+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tutorialflix.com/categories/VCS/</loc>
-  <lastmod>2020-10-31T11:49:51+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tutorialflix.com/categories/VCS/GIT/</loc>
-  <lastmod>2020-10-31T11:49:51+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tutorialflix.com/How-to-remove-files-from-Git-commit/</loc>
-  <lastmod>2020-10-31T11:49:51+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tutorialflix.com/How-to-configure-passwordless-ssh-and-scp/</loc>
-  <lastmod>2020-10-31T11:49:51+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tutorialflix.com/categories/Java/Spring/Boot/Soap/</loc>
-  <lastmod>2020-10-31T11:49:51+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tutorialflix.com/categories/Java/Spring/Boot/Soap/Security/</loc>
-  <lastmod>2020-10-31T11:49:51+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tutorialflix.com/How-to-implement-security-in-SOAP-webservice-using-Spring-WS/</loc>
-  <lastmod>2020-10-31T11:49:51+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tutorialflix.com/How-to-create-soap-webservice-using-spring-boot/</loc>
-  <lastmod>2020-10-31T11:49:51+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tutorialflix.com/categories/Java/Maven/</loc>
-  <lastmod>2020-10-31T11:49:51+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tutorialflix.com/How-to-create-a-maven-project/</loc>
-  <lastmod>2020-10-31T11:49:51+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tutorialflix.com/categories/Java/Spring/Boot/Rest/</loc>
-  <lastmod>2020-10-31T11:49:51+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tutorialflix.com/Developing-REST-Service-using-Spring-Boot/</loc>
-  <lastmod>2020-10-31T11:49:51+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tutorialflix.com/categories/Java/Spring/Camel/</loc>
-  <lastmod>2020-10-31T11:49:51+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tutorialflix.com/Developing-SOAP-Web-service-using-Apache-CXF-and-Apache-Camel/</loc>
-  <lastmod>2020-10-31T11:49:51+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tutorialflix.com/categories/Java/Core/</loc>
-  <lastmod>2020-10-31T11:49:51+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tutorialflix.com/How-to-load-property-file-in-java/</loc>
-  <lastmod>2020-10-31T11:49:51+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tutorialflix.com/page/2/</loc>
-  <lastmod>2020-10-31T11:49:51+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tutorialflix.com/archives/page/2/</loc>
-  <lastmod>2020-10-31T11:49:51+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://tutorialflix.com/categories/Webservices/</loc>
-  <lastmod>2020-10-31T11:49:51+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://tutorialflix.com/categories/Webservices/Soap/</loc>
-  <lastmod>2020-10-31T11:49:51+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://tutorialflix.com/categories/Java/Spring/Boot/Web/</loc>
-  <lastmod>2020-10-31T11:49:51+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://tutorialflix.com/Create-a-Web-Application-with-Spring-5/</loc>
-  <lastmod>2020-10-31T11:49:51+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://tutorialflix.com/tags/Boot/</loc>
-  <lastmod>2020-10-31T11:49:51+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://tutorialflix.com/tags/JDK8/</loc>
-  <lastmod>2020-10-31T11:49:51+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://tutorialflix.com/tags/Java/</loc>
-  <lastmod>2020-10-31T11:49:51+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://tutorialflix.com/tags/Migration/</loc>
-  <lastmod>2020-10-31T11:49:51+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://tutorialflix.com/tags/Spring/</loc>
-  <lastmod>2020-10-31T11:49:51+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://tutorialflix.com/tags/brew/</loc>
-  <lastmod>2020-10-31T11:49:51+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://tutorialflix.com/tags/devops/</loc>
-  <lastmod>2020-10-31T11:49:51+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://tutorialflix.com/tags/homebrew/</loc>
-  <lastmod>2020-10-31T11:49:51+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://tutorialflix.com/tags/installation/</loc>
-  <lastmod>2020-10-31T11:49:51+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://tutorialflix.com/tags/jdk/</loc>
-  <lastmod>2020-10-31T11:49:51+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://tutorialflix.com/tags/jdk11/</loc>
-  <lastmod>2020-10-31T11:49:51+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://tutorialflix.com/tags/mac/</loc>
-  <lastmod>2020-10-31T11:49:51+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://tutorialflix.com/tags/GIT/</loc>
-  <lastmod>2020-10-31T11:49:51+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://tutorialflix.com/tags/unix/</loc>
-  <lastmod>2020-10-31T11:49:51+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://tutorialflix.com/tags/SOAP/</loc>
-  <lastmod>2020-10-31T11:49:51+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://tutorialflix.com/tags/Security/</loc>
-  <lastmod>2020-10-31T11:49:51+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://tutorialflix.com/tags/Maven/</loc>
-  <lastmod>2020-10-31T11:49:51+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://tutorialflix.com/tags/Rest/</loc>
-  <lastmod>2020-10-31T11:49:51+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://tutorialflix.com/tags/SpringBoot/</loc>
-  <lastmod>2020-10-31T11:49:51+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://tutorialflix.com/tags/CXF/</loc>
-  <lastmod>2020-10-31T11:49:51+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://tutorialflix.com/tags/Camel/</loc>
-  <lastmod>2020-10-31T11:49:51+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://tutorialflix.com/How-to-create-a-WSDL-file/</loc>
-  <lastmod>2020-10-31T11:49:51+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://tutorialflix.com/SOAP/</loc>
-  <lastmod>2020-10-31T11:49:51+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://tutorialflix.com/tags/Web/</loc>
-  <lastmod>2020-10-31T11:49:51+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://tutorialflix.com/tags/</loc>
-  <lastmod>2020-10-31T11:49:51+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://tutorialflix.com/tags/Middleware/</loc>
-  <lastmod>2020-10-31T11:49:51+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://tutorialflix.com/tags/WSDL/</loc>
-  <lastmod>2020-10-31T11:49:51+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://tutorialflix.com/tags/Webservices/</loc>
-  <lastmod>2020-10-31T11:49:51+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
+  
+  <url>
+    <loc>http://www.tutorialflix.com/tags/Java/</loc>
+    <lastmod>2020-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.tutorialflix.com/tags/Spring/</loc>
+    <lastmod>2020-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.tutorialflix.com/tags/SpringBoot/</loc>
+    <lastmod>2020-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.tutorialflix.com/tags/Web/</loc>
+    <lastmod>2020-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.tutorialflix.com/tags/Rest/</loc>
+    <lastmod>2020-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.tutorialflix.com/tags/SOAP/</loc>
+    <lastmod>2020-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.tutorialflix.com/tags/Webservices/</loc>
+    <lastmod>2020-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.tutorialflix.com/tags/Middleware/</loc>
+    <lastmod>2020-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.tutorialflix.com/tags/WSDL/</loc>
+    <lastmod>2020-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.tutorialflix.com/tags/unix/</loc>
+    <lastmod>2020-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.tutorialflix.com/tags/Maven/</loc>
+    <lastmod>2020-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.tutorialflix.com/tags/installation/</loc>
+    <lastmod>2020-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.tutorialflix.com/tags/devops/</loc>
+    <lastmod>2020-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.tutorialflix.com/tags/mac/</loc>
+    <lastmod>2020-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.tutorialflix.com/tags/homebrew/</loc>
+    <lastmod>2020-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.tutorialflix.com/tags/brew/</loc>
+    <lastmod>2020-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.tutorialflix.com/tags/jdk/</loc>
+    <lastmod>2020-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.tutorialflix.com/tags/jdk11/</loc>
+    <lastmod>2020-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.tutorialflix.com/tags/GIT/</loc>
+    <lastmod>2020-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.tutorialflix.com/tags/Boot/</loc>
+    <lastmod>2020-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.tutorialflix.com/tags/Migration/</loc>
+    <lastmod>2020-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.tutorialflix.com/tags/JDK11/</loc>
+    <lastmod>2020-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.tutorialflix.com/tags/JDK8/</loc>
+    <lastmod>2020-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.tutorialflix.com/tags/Camel/</loc>
+    <lastmod>2020-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.tutorialflix.com/tags/CXF/</loc>
+    <lastmod>2020-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.tutorialflix.com/tags/Soap/</loc>
+    <lastmod>2020-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.tutorialflix.com/tags/Security/</loc>
+    <lastmod>2020-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.tutorialflix.com/tags/Docker/</loc>
+    <lastmod>2020-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
 
-
+  
+  <url>
+    <loc>http://www.tutorialflix.com/categories/Java/</loc>
+    <lastmod>2020-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.tutorialflix.com/categories/Webservices/</loc>
+    <lastmod>2020-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.tutorialflix.com/categories/Unix/</loc>
+    <lastmod>2020-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.tutorialflix.com/categories/Java/Spring/</loc>
+    <lastmod>2020-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.tutorialflix.com/categories/Java/Maven/</loc>
+    <lastmod>2020-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.tutorialflix.com/categories/Java/Core/</loc>
+    <lastmod>2020-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.tutorialflix.com/categories/Installation/</loc>
+    <lastmod>2020-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.tutorialflix.com/categories/VCS/</loc>
+    <lastmod>2020-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.tutorialflix.com/categories/Webservices/Soap/</loc>
+    <lastmod>2020-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.tutorialflix.com/categories/Java/Spring/Boot/</loc>
+    <lastmod>2020-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.tutorialflix.com/categories/Installation/JDK/</loc>
+    <lastmod>2020-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.tutorialflix.com/categories/VCS/GIT/</loc>
+    <lastmod>2020-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.tutorialflix.com/categories/Java/Spring/Boot/Web/</loc>
+    <lastmod>2020-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.tutorialflix.com/categories/Java/Spring/Boot/Rest/</loc>
+    <lastmod>2020-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.tutorialflix.com/categories/Java/Spring/Camel/</loc>
+    <lastmod>2020-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.tutorialflix.com/categories/Java/Spring/Boot/Soap/</loc>
+    <lastmod>2020-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.tutorialflix.com/categories/Java/Spring/Boot/Soap/Security/</loc>
+    <lastmod>2020-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.tutorialflix.com/categories/Docker/</loc>
+    <lastmod>2020-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
 </urlset>
